@@ -1,0 +1,3 @@
+    <actionCalls><name>{{NAME}}</name><label>{{LABEL}}</label><locationX>{{X}}</locationX><locationY>{{Y}}</locationY>
+        <actionName>TEST_sendSms</actionName><actionType>TEST</actionType>
+        <inputParameters><name>smsContent</name><value><stringValue>{{SMS_REF}}</stringValue></value></inputParameters>{{NEXT}}</actionCalls>

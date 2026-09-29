@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "sfmc": {
+      "type": "http",
+      "url": "{{MCE_MCP_URL}}"
+    },
+    "salesforce": {
+      "type": "http",
+      "url": "https://api.salesforce.com/platform/mcp/v1/sandbox/platform/sobject-all",
+      "oauth": {
+        "clientId": "{{CONNECTED_APP_CLIENT_ID}}",
+        "callbackPort": 8080
+      }
+    },
+    "d360": {
+      "type": "http",
+      "url": "https://api.salesforce.com/platform/mcp/v1/sandbox/data/data360",
+      "oauth": {
+        "clientId": "{{CONNECTED_APP_CLIENT_ID}}",
+        "callbackPort": 8080
+      }
+    }
+  }
+}

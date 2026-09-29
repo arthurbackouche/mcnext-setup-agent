@@ -1,0 +1,27 @@
+# Engagement data never belongs in the framework repo
+manifest.json
+STATUS.md
+.mcp.json
+approvals/
+out/
+templates/
+runs/
+
+# Local Claude Code state
+.claude/settings.local.json
+.claude/agent-memory/
+.claude/hooks/.chrome_state.json
+
+# Research: raw third-party article text and HTML (rebuild with tools/kb/)
+research/**/raw/
+research/**/html/
+
+# Salesforce CLI
+.sf/
+.sfdx/
+
+# Python and OS noise
+__pycache__/
+*.pyc
+.DS_Store
+*.log

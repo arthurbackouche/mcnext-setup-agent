@@ -1,0 +1,1 @@
+        <rules><name>{{NAME}}</name><conditionLogic>{{LOGIC}}</conditionLogic>{{CONDITIONS}}{{NEXT}}<label>{{LABEL}}</label></rules>

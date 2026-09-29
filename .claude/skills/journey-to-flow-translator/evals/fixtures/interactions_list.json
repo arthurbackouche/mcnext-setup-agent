@@ -1,0 +1,306 @@
+{
+ "count": 16,
+ "items": [
+  {
+   "id": "6d2a1ac1",
+   "key": "5a39",
+   "name": "Loyalty User Creation",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "OnceAndDone",
+   "defaults": {
+    "email": [
+     "{{Event.SalesforceObj9a1c.\"User: Contact:Email\"}}"
+    ]
+   },
+   "exits": [],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2026-09-22T16:24:22"
+   }
+  },
+  {
+   "id": "c0021241",
+   "key": "ff83",
+   "name": "Credit Created",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "MultipleEntries",
+   "defaults": {
+    "email": [
+     "{{Event.SalesforceObjb2f4.\"Credit__c:Customer__r:Email\"}}"
+    ]
+   },
+   "exits": [],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2026-08-23T20:05:05"
+   }
+  },
+  {
+   "id": "43e01120",
+   "key": "2cbb",
+   "name": "Unsuspended Journey",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "SingleEntryAcrossAllVersions",
+   "defaults": {
+    "email": [
+     "{{Contact.SendableAttribute.Email.\"Contact_Salesforce.Email\"}}"
+    ]
+   },
+   "exits": [],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2026-09-22T13:35:48"
+   }
+  },
+  {
+   "id": "8e60c04a",
+   "key": "90bd",
+   "name": "COMPLIANCE Store Notification of Subscription Catch Up",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "MultipleEntries",
+   "defaults": {
+    "email": [
+     "{{Event.DEAudience-6a2d.\"Email__c\"}}"
+    ]
+   },
+   "exits": [],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2024-08-22T22:55:54"
+   }
+  },
+  {
+   "id": "87d0b1b5",
+   "key": "1fa9",
+   "name": "COMPLIANCE Store Notification of Subscription Renewal",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "MultipleEntries",
+   "defaults": {
+    "email": [
+     "{{Event.AutomationAud-3f71.\"Email__c\"}}"
+    ]
+   },
+   "exits": [],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2026-06-08T17:01:33"
+   }
+  },
+  {
+   "id": "a8b01ae0",
+   "key": "1041",
+   "name": "NewMember_July_Sprint1_2024",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "OnceAndDone",
+   "defaults": {
+    "email": [
+     "{{Event.AutomationAud-c4e2.\"Email\"}}"
+    ]
+   },
+   "exits": [],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2025-04-16T17:03:22"
+   }
+  },
+  {
+   "id": "2c8201f1",
+   "key": "5d72",
+   "name": "Growth_July_Sprint1_2024",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "OnceAndDone",
+   "defaults": {
+    "email": [
+     "{{Event.AutomationAud-8b1a.\"Email\"}}"
+    ]
+   },
+   "exits": [],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2025-04-02T17:02:01"
+   }
+  },
+  {
+   "id": "4afc7d70",
+   "key": "d4af",
+   "name": "Growth_July_Sprint1_2024_V2",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "MultipleEntries",
+   "defaults": {
+    "email": [
+     "{{Event.DEAudience-e502.\"Email\"}}"
+    ]
+   },
+   "exits": [
+    {
+     "metaData": {
+      "criteriaDescription": "Id equal ItemID AND Customer__c is not equal ContactID"
+     }
+    }
+   ],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2026-09-21T18:00:40"
+   }
+  },
+  {
+   "id": "006a91a0",
+   "key": "ce7f",
+   "name": "Active_July_Sprint1_2024_V2",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "MultipleEntries",
+   "defaults": {
+    "email": [
+     "{{Event.DEAudience-9f36.\"Email\"}}"
+    ]
+   },
+   "exits": [
+    {
+     "metaData": {
+      "criteriaDescription": "Id equal ItemID AND Customer__c is not equal ContactID"
+     }
+    }
+   ],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2026-09-21T22:46:38"
+   }
+  },
+  {
+   "id": "621e8a70",
+   "key": "e586",
+   "name": "Lapsed_March_Sprint3_2025",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "MultipleEntries",
+   "defaults": {
+    "email": [
+     "{{Event.DEAudience-1a77.\"Email\"}}"
+    ]
+   },
+   "exits": [
+    {
+     "metaData": {
+      "criteriaDescription": "Id equal ItemID AND Customer__c is not equal ContactID"
+     }
+    }
+   ],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2026-09-22T01:06:20"
+   }
+  },
+  {
+   "id": "ae1596e0",
+   "key": "fcbc",
+   "name": "Test_P_MC_Unsubscribed",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "MultipleEntries",
+   "defaults": {
+    "email": []
+   },
+   "exits": [],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2025-04-24T00:50:14"
+   }
+  },
+  {
+   "id": "c1c6ba00",
+   "key": "PL_NEWCUST10_Aall",
+   "name": "Promotion Launched Emails Sent to Advocate (NEWCUST10): All Advocates",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "MultipleEntries",
+   "defaults": {
+    "email": [
+     "{{Event.PL_NEWCUST10_Aall.\"Email\"}}"
+    ]
+   },
+   "exits": [],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2025-06-22T23:17:50"
+   }
+  },
+  {
+   "id": "fc741170",
+   "key": "FP_NEWCUST10_A",
+   "name": "Friend Completes First Purchase Emails Sent to Advocate (NEWCUST10)",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "MultipleEntries",
+   "defaults": {
+    "email": [
+     "{{Event.FP_NEWCUST10_A.\"Referral:Referrer:Contact:Email\"}}"
+    ]
+   },
+   "exits": [],
+   "goals": []
+  },
+  {
+   "id": "3d8a5f12-6e94-4b71-9a2c-1f7d0c8e4b56",
+   "key": "6c91",
+   "name": "Store Welcome Journey",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "SingleEntryAcrossAllVersions",
+   "defaults": {
+    "email": [
+     "{{Event.AutomationAud-7b3c.\"Email\"}}"
+    ]
+   },
+   "exits": [],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2026-09-21T22:03:03"
+   }
+  },
+  {
+   "id": "9f2e6b41-7ab0-45f0-8c2d-3ea1a2b3c4d5",
+   "key": "42a1",
+   "name": "Loyalty-Plan Renewal and Winback",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "SingleEntryAcrossAllVersions",
+   "defaults": {
+    "email": [
+     "{{Event.DEAudience-2f6e.\"Email\"}}"
+    ]
+   },
+   "exits": [],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2026-05-13T20:03:12"
+   }
+  },
+  {
+   "id": "1d6604d0",
+   "key": "b33b",
+   "name": "Loyalty Plan - Renewal Confirmation Journey",
+   "version": 1,
+   "status": "Published",
+   "entryMode": "SingleEntryAcrossAllVersions",
+   "defaults": {
+    "email": [
+     "{{Event.DEAudience-7c19.\"Email\"}}"
+    ]
+   },
+   "exits": [],
+   "goals": [],
+   "activity": {
+    "lastContactProcessed": "2026-09-22T16:01:40"
+   }
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+  "client": "{{CLIENT}}",
+  "edition": "{{EDITION}}",
+  "orgs": {
+    "mce_eid": "{{MCE_EID}}",
+    "sandbox_alias": "{{SANDBOX_ALIAS}}",
+    "production_aliases": ["{{PROD_ALIAS}}"],
+    "template_dir": "templates/{{SANDBOX_ALIAS}}"
+  },
+  "phases": {
+    "setup": {"status": "not_started", "owner": "mcnext-setup"},
+    "discovery": {"status": "not_started", "owner": "journey-translator"},
+    "content": {"status": "not_started", "owner": "content-auditor"},
+    "data": {"status": "not_started", "owner": "data-mapper"},
+    "translate": {"status": "not_started", "owner": "journey-translator"},
+    "build": {"status": "not_started", "owner": "flow-deployer"},
+    "cutover": {"status": "not_started", "owner": "journey-translator"}
+  },
+  "journeys": [],
+  "content": {},
+  "data": {},
+  "decisions_log": []
+}

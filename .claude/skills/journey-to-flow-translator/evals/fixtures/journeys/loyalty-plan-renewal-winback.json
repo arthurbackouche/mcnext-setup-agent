@@ -1,0 +1,493 @@
+{
+ "id": "9f2e6b41-7ab0-45f0-8c2d-3ea1a2b3c4d5",
+ "key": "42a19c01",
+ "name": "Loyalty-Plan Renewal and Winback",
+ "version": 1,
+ "status": "Published",
+ "entryMode": "SingleEntryAcrossAllVersions",
+ "defaults": {
+  "email": [
+   "{{Event.DEAudience-2f6e0a91-1c8d-49e0-8f2b-6a4c7d1e9b30.\"Email\"}}"
+  ],
+  "mobileNumber": [
+   "{{Event.DEAudience-2f6e0a91.\"Phone\"}}"
+  ]
+ },
+ "activity": {
+  "lastContactProcessed": "2026-05-13T20:03:12"
+ },
+ "triggers": [
+  {
+   "type": "EmailAudience",
+   "metaData": {
+    "eventDefinitionKey": "DEAudience-2f6e0a91-1c8d-49e0-8f2b-6a4c7d1e9b30"
+   }
+  }
+ ],
+ "exits": [],
+ "goals": [],
+ "activities": [
+  {
+   "key": "MULTICRITERIADECISIONV2-1",
+   "name": "",
+   "type": "MULTICRITERIADECISION",
+   "outcomes": [
+    {
+     "key": "default_path_1",
+     "next": "EMAILV2-1",
+     "metaData": {
+      "label": "Plan Member"
+     }
+    },
+    {
+     "key": "remainder_path",
+     "next": "WAITBYDURATION-4",
+     "metaData": {
+      "label": "Remainder"
+     }
+    }
+   ],
+   "configurationArguments": {
+    "criteria": {
+     "default_path_1": "<FilterDefinition><ConditionSet Operator=\"AND\"><Condition IsEphemeralAttribute=\"true\" Key=\"Event.DEAudience-2f6e0a91-1c8d-49e0-8f2b-6a4c7d1e9b30.Plan\" Operator=\"Is\"><Value><![CDATA[true]]></Value></Condition><Condition IsEphemeralAttribute=\"true\" Key=\"Event.DEAudience-2f6e0a91-1c8d-49e0-8f2b-6a4c7d1e9b30.Loyalty_Member\" Operator=\"Is\"><Value><![CDATA[false]]></Value></Condition></ConditionSet></FilterDefinition>"
+    }
+   }
+  },
+  {
+   "key": "EMAILV2-2",
+   "name": "Loyalty_Plan_RenewalTrigger_3",
+   "type": "EMAILV2",
+   "outcomes": [
+    {
+     "key": "EMAILV2-2o",
+     "next": "SMSSYNC-2"
+    }
+   ],
+   "configurationArguments": {
+    "triggeredSend": {
+     "emailId": 40001,
+     "emailSubject": "%%=v(@FirstName)=%%'s Rewards Plan Has Ended",
+     "publicationListId": 1145,
+     "sendClassificationId": "88d8",
+     "senderProfileId": "d444"
+    }
+   }
+  },
+  {
+   "key": "WAITBYDURATION-8",
+   "name": "1 minute",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-8o"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 1,
+    "waitUnit": "MINUTES",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  },
+  {
+   "key": "EMAILV2-1",
+   "name": "Loyalty_Plan_RenewalTrigger_2",
+   "type": "EMAILV2",
+   "outcomes": [
+    {
+     "key": "EMAILV2-1o",
+     "next": "SMSSYNC-1"
+    }
+   ],
+   "configurationArguments": {
+    "triggeredSend": {
+     "emailId": 40002,
+     "emailSubject": "Important: Your Rewards Plan is Changing",
+     "publicationListId": 1145,
+     "sendClassificationId": "88d8",
+     "senderProfileId": "d444"
+    }
+   }
+  },
+  {
+   "key": "WAITBYDURATION-5",
+   "name": "3 days",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-5o",
+     "next": "MULTICRITERIADECISIONV2-4"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 3,
+    "waitUnit": "DAYS",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  },
+  {
+   "key": "SMSSYNC-2",
+   "name": "Loyalty_Plan_RenewalTrigger3_SMS",
+   "type": "SMSSYNC",
+   "outcomes": [
+    {
+     "key": "SMSSYNC-2o",
+     "next": "WAITBYDURATION-2"
+    }
+   ],
+   "configurationArguments": {
+    "assetId": 50001,
+    "fromName": "15550000000",
+    "isOptIn": false,
+    "honorBlackoutWindowEnum": 2,
+    "mobileBlackoutWindowStartTime": "17:00",
+    "mobileBlackoutWindowEndTime": "11:00"
+   },
+   "metaData": {
+    "store": {
+     "selectedContentBuilderMessage": "%%[SET @StoreName = Lookup('Account_Salesforce','Name','Id',@StoreID)]%%Hi...",
+     "messageConfiguration": {
+      "selectedCode": {
+       "countryCode": "AU"
+      }
+     }
+    }
+   }
+  },
+  {
+   "key": "WAITBYDURATION-6",
+   "name": "1 minute",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-6o"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 1,
+    "waitUnit": "MINUTES",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  },
+  {
+   "key": "MULTICRITERIADECISIONV2-3",
+   "name": "",
+   "type": "MULTICRITERIADECISION",
+   "outcomes": [
+    {
+     "key": "default_path_1",
+     "next": "EMAILV2-2",
+     "metaData": {
+      "label": "Loyalty Non Member"
+     }
+    },
+    {
+     "key": "remainder_path",
+     "next": "WAITBYDURATION-16",
+     "metaData": {
+      "label": "Remainder"
+     }
+    }
+   ],
+   "configurationArguments": {
+    "criteria": {
+     "default_path_1": "<FilterDefinition><ConditionSet Operator=\"AND\"><Condition IsEphemeralAttribute=\"true\" Key=\"Event.DEAudience-2f6e0a91-1c8d-49e0-8f2b-6a4c7d1e9b30.Loyalty_Member\" Operator=\"Is\"><Value><![CDATA[false]]></Value></Condition></ConditionSet></FilterDefinition>"
+    }
+   }
+  },
+  {
+   "key": "SMSSYNC-1",
+   "name": "Loyalty_Plan_RenewalTrigger2_SMS",
+   "type": "SMSSYNC",
+   "outcomes": [
+    {
+     "key": "SMSSYNC-1o",
+     "next": "WAITBYDURATION-1"
+    }
+   ],
+   "configurationArguments": {
+    "assetId": 50002,
+    "fromName": "15550000000",
+    "isOptIn": false,
+    "honorBlackoutWindowEnum": 2,
+    "mobileBlackoutWindowStartTime": "17:00",
+    "mobileBlackoutWindowEndTime": "11:00"
+   },
+   "metaData": {
+    "store": {
+     "selectedContentBuilderMessage": "%%[SET @StoreName = Lookup('Account_Salesforce','Name','Id',@StoreID)]%%Hi...",
+     "messageConfiguration": {
+      "selectedCode": {
+       "countryCode": "AU"
+      }
+     }
+    }
+   }
+  },
+  {
+   "key": "SMSSYNC-5",
+   "name": "GroupB_Loyalty_Plan_Winback_SMS",
+   "type": "SMSSYNC",
+   "outcomes": [
+    {
+     "key": "SMSSYNC-5o",
+     "next": "WAITBYDURATION-8"
+    }
+   ],
+   "configurationArguments": {
+    "assetId": 50003,
+    "fromName": "15550000000",
+    "isOptIn": false,
+    "honorBlackoutWindowEnum": 2,
+    "mobileBlackoutWindowStartTime": "17:00",
+    "mobileBlackoutWindowEndTime": "12:00"
+   },
+   "metaData": {
+    "store": {
+     "selectedContentBuilderMessage": "%%[SET @StoreName = Lookup('Account_Salesforce','Name','Id',@StoreID)]%%Hi...",
+     "messageConfiguration": {
+      "selectedCode": {
+       "countryCode": "AU"
+      }
+     }
+    }
+   }
+  },
+  {
+   "key": "MULTICRITERIADECISIONV2-2",
+   "name": "",
+   "type": "MULTICRITERIADECISION",
+   "outcomes": [
+    {
+     "key": "default_path_1",
+     "next": "EMAILV2-3",
+     "metaData": {
+      "label": "Loyalty Non Member"
+     }
+    },
+    {
+     "key": "remainder_path",
+     "next": "WAITBYDURATION-15",
+     "metaData": {
+      "label": "Remainder"
+     }
+    }
+   ],
+   "configurationArguments": {
+    "criteria": {
+     "default_path_1": "<FilterDefinition><ConditionSet Operator=\"AND\"><Condition IsEphemeralAttribute=\"true\" Key=\"Event.DEAudience-2f6e0a91-1c8d-49e0-8f2b-6a4c7d1e9b30.Loyalty_Member\" Operator=\"Is\"><Value><![CDATA[false]]></Value></Condition></ConditionSet></FilterDefinition>"
+    }
+   }
+  },
+  {
+   "key": "WAITBYDURATION-3",
+   "name": "1 minute",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-3o"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 1,
+    "waitUnit": "MINUTES",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  },
+  {
+   "key": "WAITBYDURATION-16",
+   "name": "1 minute",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-16o"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 1,
+    "waitUnit": "MINUTES",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  },
+  {
+   "key": "WAITBYDURATION-2",
+   "name": "2 weeks",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-2o",
+     "next": "MULTICRITERIADECISIONV2-2"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 2,
+    "waitUnit": "WEEKS",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  },
+  {
+   "key": "SMSSYNC-3",
+   "name": "GroupA_Loyalty_Plan_Winback_SMS",
+   "type": "SMSSYNC",
+   "outcomes": [
+    {
+     "key": "SMSSYNC-3o",
+     "next": "WAITBYDURATION-3"
+    }
+   ],
+   "configurationArguments": {
+    "assetId": 50004,
+    "fromName": "15550000000",
+    "isOptIn": false,
+    "honorBlackoutWindowEnum": 2,
+    "mobileBlackoutWindowStartTime": "17:00",
+    "mobileBlackoutWindowEndTime": "12:00"
+   },
+   "metaData": {
+    "store": {
+     "selectedContentBuilderMessage": "%%[SET @StoreName = Lookup('Account_Salesforce','Name','Id',@StoreID)]%%Hi...",
+     "messageConfiguration": {
+      "selectedCode": {
+       "countryCode": "AU"
+      }
+     }
+    }
+   }
+  },
+  {
+   "key": "WAITBYDURATION-15",
+   "name": "1 minute",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-15o"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 1,
+    "waitUnit": "MINUTES",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  },
+  {
+   "key": "MULTICRITERIADECISIONV2-4",
+   "name": "",
+   "type": "MULTICRITERIADECISION",
+   "outcomes": [
+    {
+     "key": "default_path_1",
+     "next": "SMSSYNC-3",
+     "metaData": {
+      "label": "GroupA Loyalty Non Member"
+     }
+    },
+    {
+     "key": "bd7685a5",
+     "next": "SMSSYNC-5",
+     "metaData": {
+      "label": "GroupB Loyalty Non Member"
+     }
+    },
+    {
+     "key": "remainder_path",
+     "next": "WAITBYDURATION-6",
+     "metaData": {
+      "label": "Remainder"
+     }
+    }
+   ],
+   "configurationArguments": {
+    "criteria": {
+     "default_path_1": "<FilterDefinition><ConditionSet Operator=\"AND\"><Condition IsEphemeralAttribute=\"true\" Key=\"Event.DEAudience-2f6e0a91-1c8d-49e0-8f2b-6a4c7d1e9b30.Loyalty_Member\" Operator=\"Is\"><Value><![CDATA[false]]></Value></Condition><Condition Key=\"Store_Customer_Master_Deduped.StoreKey\" Operator=\"ExistsInWholeWord\"><Value><![CDATA[3001, 3002, 3003, 3004]]></Value></Condition></ConditionSet></FilterDefinition>",
+     "bd7685a5": "<FilterDefinition><ConditionSet Operator=\"AND\"><Condition Key=\"Store_Customer_Master_Deduped.Loyalty_Member\" Operator=\"Is\"><Value><![CDATA[false]]></Value></Condition><Condition Key=\"Store_Customer_Master_Deduped.StoreKey\" Operator=\"ExistsInWholeWord\"><Value><![CDATA[3101, 3102, 3103, 3104, 3105, 3106, 3107, 3108, 3109, 3110, 3111, 3050, 3112, 3113, 3114, 3115]]></Value></Condition></ConditionSet></FilterDefinition>"
+    }
+   }
+  },
+  {
+   "key": "EMAILV2-3",
+   "name": "Loyalty_Plan_Winback",
+   "type": "EMAILV2",
+   "outcomes": [
+    {
+     "key": "EMAILV2-3o",
+     "next": "WAITBYDURATION-5"
+    }
+   ],
+   "configurationArguments": {
+    "triggeredSend": {
+     "emailId": 40003,
+     "emailSubject": "%%=ProperCase(@FirstName)=%%'s Exclusive Offer",
+     "publicationListId": 1145,
+     "sendClassificationId": "88d8",
+     "senderProfileId": "d444"
+    }
+   }
+  },
+  {
+   "key": "WAITBYDURATION-4",
+   "name": "1 minute",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-4o"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 1,
+    "waitUnit": "MINUTES",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  },
+  {
+   "key": "WAITBYDURATION-1",
+   "name": "7 days",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-1o",
+     "next": "MULTICRITERIADECISIONV2-3"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 7,
+    "waitUnit": "DAYS",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  }
+ ]
+}

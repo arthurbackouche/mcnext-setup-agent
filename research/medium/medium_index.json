@@ -1,0 +1,1762 @@
+[
+  {
+    "url": "https://medium.com/@marketingcloudtips/unveiling-salesforces-latest-innovation-marketing-cloud-growth-edition-announcement-1e504a859f8e",
+    "title": "SFMC Tips #28 : Overview and Explanation of Marketing Cloud Growth Edition",
+    "date": "Feb 21, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-automatically-add-utm-and-custom-parameters-to-links-0f908964e9f3",
+    "title": "SFMC Tips #352 : Marketing Cloud Next: Automatically Add UTM and Custom Parameters to Links",
+    "date": "2h ago"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-setting-domains-for-email-images-915bd588aa66",
+    "title": "SFMC Tips #351 : Marketing Cloud Next: Setting Domains for Email Images",
+    "date": "1d ago"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-marketing-object-winter-27-new-features-fd8dfb0ba166",
+    "title": "SFMC Tips #350 : Marketing Cloud Next: Marketing Object — Winter ’27 New Features",
+    "date": "4d ago"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-bulk-upload-and-publish-multiple-images-584c437d4429",
+    "title": "SFMC Tips #349 : Marketing Cloud Next: Bulk Upload and Publish Multiple Images",
+    "date": "Sep 21"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/summary-of-the-dreamforce-2026-marketing-keynote-ea41b730f831",
+    "title": "SFMC Tips #348 : Summary of the Dreamforce 2026 Marketing Keynote",
+    "date": "Sep 18"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-search-cms-content-with-rest-api-6114a250409d",
+    "title": "SFMC Tips #347 : Marketing Cloud Next: Search CMS Content with REST API",
+    "date": "Sep 17"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-fix-tracked-links-with-post-send-link-editing-0c7a6b43c488",
+    "title": "SFMC Tips #346 : Marketing Cloud Next: Fix Tracked Links with Post-Send Link Editing",
+    "date": "Sep 16"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-individual-path-selection-with-personalize-paths-31616efab678",
+    "title": "SFMC Tips #345 : Marketing Cloud Next: Individual Path Selection with Personalize Paths",
+    "date": "Sep 15"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-impression-region-tracking-bd27e34bc541",
+    "title": "SFMC Tips #344 : Marketing Cloud Next: Impression Region Tracking",
+    "date": "Sep 13"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-share-sending-domains-from-marketing-cloud-engagement-405c574ae0b9",
+    "title": "SFMC Tips #343 : Marketing Cloud Next: Share Sending Domains from Marketing Cloud Engagement",
+    "date": "Sep 11"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-send-copies-of-emails-with-compliance-bcc-8f045daa09ea",
+    "title": "SFMC Tips #342 : Marketing Cloud Next: Send Copies of Emails with Compliance BCC",
+    "date": "Sep 7"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-data-360-marketing-agent-3d604261253d",
+    "title": "SFMC Tips #341 : Marketing Cloud Next: Data 360 Marketing Agent",
+    "date": "Sep 6"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/understand-automation-processing-times-automation-activity-viewer-336830436715",
+    "title": "SFMC Tips #340 : Understand Automation Processing Times: Automation Activity Viewer",
+    "date": "Sep 3"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/dependency-impact-analysis-tool-marketing-cloud-schema-explorer-e773d93c4827",
+    "title": "SFMC Tips #339 : Dependency / Impact Analysis Tool: Marketing Cloud Schema Explorer",
+    "date": "Sep 2"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-buyer-engagement-agent-8f59a9b9926c",
+    "title": "SFMC Tips #338 : Marketing Cloud Next: Buyer Engagement Agent",
+    "date": "Sep 1"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-marketing-completion-actions-db08e0270b74",
+    "title": "SFMC Tips #337 : Marketing Cloud Next: Marketing Completion Actions",
+    "date": "Aug 31"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/agentforce-implementing-starter-prompts-for-a-service-agent-1895b841e7e1",
+    "title": "SFMC Tips #336 : Agentforce: Implementing Starter Prompts for a Service Agent",
+    "date": "Aug 30"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-custom-fonts-available-for-content-6e4cd62e9b82",
+    "title": "SFMC Tips #335 : Marketing Cloud Next: Custom Fonts Available for Content",
+    "date": "Aug 28"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-reference-content-block-cache-issue-9db88c63162c",
+    "title": "SFMC Tips #334 : Marketing Cloud Next: Reference Content Block Cache Issue",
+    "date": "Aug 20"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-winter-27-release-highlights-e703e0083c9a",
+    "title": "SFMC Tips #333 : Marketing Cloud Next: Winter ’27 Release Highlights",
+    "date": "Aug 18"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-engagement-winter27-release-highlights-bac5f25b2ca5",
+    "title": "SFMC Tips #332 : Marketing Cloud Engagement: Winter’27 Release Highlights",
+    "date": "Aug 18"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-consultant-practice-exam-part-3-advanced-c26421686e2a",
+    "title": "SFMC Tips #331 : Marketing Cloud Next Consultant Practice Exam — Part 3: Advanced",
+    "date": "Aug 17"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-consultant-practice-exam-part-2-intermediate-81e3a086baaf",
+    "title": "SFMC Tips #330 : Marketing Cloud Next Consultant Practice Exam — Part 2: Intermediate",
+    "date": "Aug 16"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-consultant-practice-exam-part-1-easy-5bcdc2503e04",
+    "title": "SFMC Tips #329 : Marketing Cloud Next Consultant Practice Exam — Part 1: Easy",
+    "date": "Aug 15"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-attribute-shortcuts-in-segmentation-f266c91a6cda",
+    "title": "SFMC Tips #328 : Marketing Cloud Next: Attribute Shortcuts in Segmentation",
+    "date": "Aug 13"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/salesforce-certified-marketing-cloud-next-consultant-certification-officially-announced-17e72cf40b6f",
+    "title": "SFMC Tips #327 : Salesforce Certified Marketing Cloud Next Consultant Exam Experience & Complete…",
+    "date": "Aug 6"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-email-archiving-for-email-auditing-8e278ca6e7ad",
+    "title": "SFMC Tips #326 : Marketing Cloud Next: Email Archiving for Email Auditing",
+    "date": "Aug 4"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/agentforce-ai-agents-retain-memory-across-sessions-and-conversations-0816ae85ace6",
+    "title": "SFMC Tips #325 : Agentforce: AI Agents Retain Memory Across Sessions and Conversations",
+    "date": "Aug 3"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-immediate-email-delivery-with-the-direct-email-send-api-a12a3cff8f26",
+    "title": "SFMC Tips #324 : Marketing Cloud Next: Immediate Email Delivery with the Direct Email Send API",
+    "date": "Jul 30"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-abandoned-shopping-cart-trigger-d1039e12bf79",
+    "title": "SFMC Tips #323 : Marketing Cloud Next: Abandoned Shopping Cart Trigger",
+    "date": "Jul 22"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-ai-review-in-the-email-preview-feature-e9c8431dee7a",
+    "title": "SFMC Tips #322 : Marketing Cloud Next: AI Review in the Email Preview Feature",
+    "date": "Jul 15"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-custom-tabs-for-the-email-preview-feature-edc57cc47506",
+    "title": "SFMC Tips #321 : Marketing Cloud Next: Custom Tabs for the Email Preview Feature",
+    "date": "Jul 14"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-account-discovery-agent-78150805119d",
+    "title": "SFMC Tips #320 : Marketing Cloud Next: Account Discovery Agent",
+    "date": "Jul 10"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-custom-signatures-and-legal-disclosures-for-conversational-email-90d6d09bf5ea",
+    "title": "SFMC Tips #319 : Marketing Cloud Next: Custom Signatures and Legal Disclosures for Conversational…",
+    "date": "Jul 7"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/agentforce-easily-switch-llm-models-for-each-subagent-with-model-override-fc83493ee86b",
+    "title": "SFMC Tips #318 : Agentforce: Easily Switch LLM Models for Each Subagent with Model Override",
+    "date": "Jul 5"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-integrate-campaigns-with-slack-082b5b628342",
+    "title": "SFMC Tips #317 : Marketing Cloud Next: How to Integrate Campaigns with Slack",
+    "date": "Jun 29"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-personalize-images-using-ampscript-and-data-graphs-bd852129efbb",
+    "title": "SFMC Tips #316 : Marketing Cloud Next: Personalize Images Using AMPscript and Data Graphs",
+    "date": "Jun 24"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/agentforce-multilingual-display-for-enhanced-chat-based-on-browser-language-0046c8b45d56",
+    "title": "SFMC Tips #315 : Agentforce: Multilingual Enhanced Chat Display Based on Browser Language",
+    "date": "Jun 23"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-configuring-identity-resolution-filters-72508fa04654",
+    "title": "SFMC Tips #314 : Marketing Cloud Next: Configuring Identity Resolution Filters",
+    "date": "Jun 22"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-configure-marketing-objects-ec7213fda266",
+    "title": "SFMC Tips #313 : Marketing Cloud Next: How to Configure Marketing Objects",
+    "date": "Jun 19"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-sending-emails-with-a-plain-text-version-8576936e9a02",
+    "title": "SFMC Tips #312 : Marketing Cloud Next: Sending Emails with a Plain Text Version",
+    "date": "Jun 18"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-setting-up-consent-synchronization-with-mc-engagement-33b4cba94f47",
+    "title": "SFMC Tips #311 : Marketing Cloud Next: Setting Up Consent Synchronization with MCE",
+    "date": "Jun 17"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-linkedin-posting-from-campaigns-61e043fe8a88",
+    "title": "SFMC Tips #310 : Marketing Cloud Next: LinkedIn Posting from Campaigns",
+    "date": "Jun 16"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-view-flow-run-for-individual-analytics-70ebedf158bb",
+    "title": "SFMC Tips #309 : Marketing Cloud Next: View Flow Run for Individual Analytics",
+    "date": "Jun 14"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-send-to-a-flow-for-cross-flow-orchestration-859b7fcf84cc",
+    "title": "SFMC Tips #308 : Marketing Cloud Next: Send to a Flow for Cross-Flow Orchestration",
+    "date": "Jun 13"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-multilingual-support-with-content-variations-175963c1fb97",
+    "title": "SFMC Tips #307 : Marketing Cloud Next: Multilingual Support with Content Variations",
+    "date": "Jun 12"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-salesforce-record-data-provider-df07d9206206",
+    "title": "SFMC Tips #306 : Marketing Cloud Next: Salesforce Record Data Provider",
+    "date": "Jun 10"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-actionable-list-flows-42b6a0fcc277",
+    "title": "SFMC Tips #305 : Marketing Cloud Next: Actionable List Flow",
+    "date": "Jun 9"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-dynamic-from-address-and-reply-address-ca084748f1e2",
+    "title": "SFMC Tips #304 : Marketing Cloud Next: Dynamic From Address and Reply Address",
+    "date": "Jun 8"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-configure-the-cc-email-feature-7f9fb279aa97",
+    "title": "SFMC Tips #303 : Marketing Cloud Next: How to Configure the CC Email Feature",
+    "date": "Jun 8"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/key-innovations-announced-during-the-connections-2026-keynote-00198c78e455",
+    "title": "SFMC Tips #302 : Key Innovations Announced During the Connections 2026 Keynote",
+    "date": "Jun 4"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-a-free-developer-edition-available-to-everyone-9afcac83f318",
+    "title": "SFMC Tips #301 : Marketing Cloud Next: A Free Developer Edition Available to Everyone",
+    "date": "May 30"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/the-future-of-marketing-cloud-engagement-changed-by-mcp-servers-e2f7f29ecd90",
+    "title": "SFMC Tips #300 : The Future of Marketing Cloud Engagement Changed by MCP Servers",
+    "date": "May 24"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/agentforce-if-knowledge-cannot-find-an-answer-search-the-web-34b70e7a965e",
+    "title": "SFMC Tips #299 : Agentforce: If Knowledge Cannot Find an Answer ⇒ Search the Web",
+    "date": "May 22"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-creating-a-signup-form-simplified-version-43e797302478",
+    "title": "SFMC Tips #298 : Marketing Cloud Next: Creating a Signup Form (Simplified Version)",
+    "date": "May 19"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-use-the-exit-from-a-flow-element-6398bef93977",
+    "title": "SFMC Tips #297 : Marketing Cloud Next: How to Use the “Exit from a Flow” Element",
+    "date": "May 18"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-lookup-data-graph-data-provider-0054d3fcdd83",
+    "title": "SFMC Tips #296 : Marketing Cloud Next: Lookup Data Graph Data Provider",
+    "date": "May 17"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-create-custom-web-tracking-consent-banners-27de46f86e0b",
+    "title": "SFMC Tips #295 : Marketing Cloud Next: Create Custom Web Tracking Consent Banners",
+    "date": "May 16"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-flow-save-history-can-now-be-reviewed-and-restored-109e00034ac9",
+    "title": "SFMC Tips #294 : Marketing Cloud Next: Flow Save History Can Now Be Reviewed and Restored",
+    "date": "May 15"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-retrieving-a-specific-record-from-a-data-graph-in-marketing-flows-e03c87cea117",
+    "title": "SFMC Tips #293 : Marketing Cloud Next: Retrieving a Specific Record from a Data Graph in Marketing…",
+    "date": "May 14"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-crm-record-query-conditional-search-flow-8bfb3e7c3d74",
+    "title": "SFMC Tips #292 : Marketing Cloud Next: CRM Record Query Flow",
+    "date": "May 13"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-shared-ip-addresses-and-dedicated-ip-addresses-5237675268e2",
+    "title": "SFMC Tips #291 : Marketing Cloud Next: Shared IP Addresses and Dedicated IP Addresses",
+    "date": "May 12"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-personalization-with-content-variables-18ebb6764911",
+    "title": "SFMC Tips #290 : Marketing Cloud Next: Personalization with Content Variables",
+    "date": "May 11"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-analysis-features-using-crm-analytics-lenses-ec76f8886356",
+    "title": "SFMC Tips #289 : Marketing Cloud Next: Analysis Features Using CRM Analytics Lenses",
+    "date": "May 8"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-segment-triggered-flow-39957ec68f06",
+    "title": "SFMC Tips #288 : Marketing Cloud Next: Segment-Triggered Flow",
+    "date": "May 7"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-behavior-of-exit-criteria-7f55f708ecea",
+    "title": "SFMC Tips #287 : Marketing Cloud Next: Behavior of Exit Rules",
+    "date": "May 3"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-conversion-analytics-dashboard-ae03ba6cb890",
+    "title": "SFMC Tips #286 : Marketing Cloud Next: Conversion Analytics Dashboard",
+    "date": "May 1"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-summer-26-release-highlights-04f6c5abdee6",
+    "title": "SFMC Tips #285 : Marketing Cloud Next: Summer ’26 Release Highlights",
+    "date": "Apr 30"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-engagement-summer-26-release-highlights-d51f444d3402",
+    "title": "SFMC Tips #284 : Marketing Cloud Engagement: Summer ’26 Release Highlights",
+    "date": "Apr 28"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-use-calculated-insights-in-flows-a83a3eb48909",
+    "title": "SFMC Tips #283 : Marketing Cloud Next: How to Use Calculated Insights in Flows",
+    "date": "Apr 27"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-left-navigation-beta-in-the-data-cloud-app-11568e2a91e1",
+    "title": "SFMC Tips #282 : Data Cloud: Left Navigation (Beta) in the Data Cloud App",
+    "date": "Apr 26"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-set-up-conversational-email-0ef29d7fd113",
+    "title": "SFMC Tips #281 : Marketing Cloud Next: How to Set Up Conversational Email",
+    "date": "Apr 24"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-summer-26-ampscript-support-has-arrived-18272b5f6a1e",
+    "title": "SFMC Tips #280 : Marketing Cloud Next: Customize messages flexibly with AMPscript",
+    "date": "Apr 22"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/chrome-extension-sfmc-query-saver-ver-1-0-2-update-11863e380df6",
+    "title": "SFMC Tips #279 : Chrome Extension SFMC Query Saver Ver. 1.0.2 Update",
+    "date": "Apr 20"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-on-demand-publish-feature-for-batch-dmo-activation-8c44ac69cf48",
+    "title": "SFMC Tips #278 : Data Cloud: On-Demand Publish Feature for Batch DMO Activation",
+    "date": "Apr 18"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-custom-preference-page-setup-311bc587f406",
+    "title": "SFMC Tips #277 : Marketing Cloud Next: Setting Up a Preference Page",
+    "date": "Apr 15"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-search-segments-by-individual-137deb00519a",
+    "title": "SFMC Tips #276 : Marketing Cloud Next: How to Search Segments by Individual",
+    "date": "Apr 12"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-key-points-to-be-careful-about-in-identity-resolution-ffa5f9484aed",
+    "title": "SFMC Tips #275 : Marketing Cloud Next: Key Points to Be Careful About in Identity Resolution",
+    "date": "Apr 5"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-explanation-of-segment-operators-9dce94e06322",
+    "title": "SFMC Tips #274 : Data Cloud: Explanation of Segment Operators",
+    "date": "Apr 4"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-flow-decisioning-agent-0d0ace1b85e9",
+    "title": "SFMC Tips #273 : Marketing Cloud Next: Flow Decisioning Agent",
+    "date": "Apr 2"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/chrome-extension-sfmc-query-saver-ver-0-2-2-update-79db07a0e298",
+    "title": "SFMC Tips #272 : Chrome Extension SFMC Query Saver Ver. 0.2.2 Update",
+    "date": "Mar 26"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-segment-triggered-flow-based-on-engagement-cf48dd0aa6c2",
+    "title": "SFMC Tips #271 : Marketing Cloud Next: Segment Triggered Flow Based on Engagement",
+    "date": "Mar 24"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-segment-triggered-flow-based-on-individual-8964a8886f59",
+    "title": "SFMC Tips #270 : Marketing Cloud Next: Segment Triggered Flow Based on Individual",
+    "date": "Mar 23"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-how-to-check-the-high-water-mark-used-for-data-cloud-delta-extraction-efa89612b71e",
+    "title": "SFMC Tips #269 : Data Cloud: How to Check the High Water Mark Used for Delta Extraction",
+    "date": "Mar 22"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-send-marketing-cloud-engagement-emails-from-a-flow-450b1173ace2",
+    "title": "SFMC Tips #268 : Marketing Cloud Next: Send Marketing Cloud Engagement Emails from a Flow",
+    "date": "Mar 19"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-register-subscribers-with-held-status-in-the-all-subscribers-list-64c8c0823837",
+    "title": "SFMC Tips #267 : How to Register Subscribers with Held Status in the All Subscribers List",
+    "date": "Mar 14"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-business-units-now-generally-available-b01e49c09a9a",
+    "title": "SFMC Tips #266 : Marketing Cloud Next: Business Units Now Generally Available",
+    "date": "Mar 13"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-journey-decisioning-agent-0226e5f82cd2",
+    "title": "SFMC Tips #265 : Marketing Cloud Next: Journey Decisioning Agent",
+    "date": "Mar 10"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-journey-event-triggered-flow-cf36d7d50642",
+    "title": "SFMC Tips #264 : Marketing Cloud Next: Journey Event-Triggered Flow",
+    "date": "Mar 9"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-subscriberkey-identity-resolution-match-rule-ce345a3ae072",
+    "title": "SFMC Tips #263 : Marketing Cloud Next: SubscriberKey Identity Resolution Match Rule",
+    "date": "Mar 8"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-flow-performance-analytics-feature-8301c6431cb3",
+    "title": "SFMC Tips #262 : Marketing Cloud Next: Flow Performance",
+    "date": "Mar 2"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-automatic-campaign-creation-from-pdf-word-136a30a73131",
+    "title": "SFMC Tips #261 : Marketing Cloud Next: Automatic Campaign Creation from PDF / Word",
+    "date": "Mar 1"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-distributed-marketing-alerts-9182444afd2f",
+    "title": "SFMC Tips #260 : Marketing Cloud Next: Distributed Marketing & Alerts",
+    "date": "Feb 27"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-campaign-preview-refinement-1c4ef1bfda13",
+    "title": "SFMC Tips #259 : Marketing Cloud Next: Campaign Preview Refinement",
+    "date": "Feb 26"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-send-emails-with-pdf-attachments-78eee857af44",
+    "title": "SFMC Tips #258 : Marketing Cloud Next: Send Emails with PDF Attachments",
+    "date": "Feb 25"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-unified-engagement-history-dashboard-ee97fd1d217f",
+    "title": "SFMC Tips #257 : Marketing Cloud Next: Unified Engagement History Dashboard",
+    "date": "Feb 24"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-progressive-profiling-fa159cc3e103",
+    "title": "SFMC Tips #256 : Marketing Cloud Next: Progressive Profiling",
+    "date": "Feb 24"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-255-marketing-cloud-next-ready-to-use-queries-for-query-editor-72d1675c06d8",
+    "title": "SFMC Tips #255 : Marketing Cloud Next: Ready-to-Use Queries for Query Editor",
+    "date": "Feb 22"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-exporting-data-to-google-sheets-cb672a47228a",
+    "title": "SFMC Tips #254 : Marketing Cloud Next: Exporting Data to Google Sheets",
+    "date": "Feb 22"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/integrating-data-extensions-with-google-sheets-using-apps-script-7f7c1eb9e1a2",
+    "title": "SFMC Tips #253 : Integrating Data Extensions with Google Sheets Using Apps Script",
+    "date": "Feb 20"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-path-experiment-enhancements-spring-26-424bc50ec961",
+    "title": "SFMC Tips #252 : Marketing Cloud Next: “Path Experiment” Enhancements — Spring ‘26",
+    "date": "Feb 20"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-more-flexible-scheduling-for-segment-triggered-flows-b49477a93001",
+    "title": "SFMC Tips #251 : Marketing Cloud Next: More Flexible Scheduling for Segment-Triggered Flows",
+    "date": "Feb 18"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-send-to-journey-action-3a0c77cc2b63",
+    "title": "SFMC Tips #250 : Marketing Cloud Next: Send to Journey Action",
+    "date": "Feb 18"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-create-consent-records-with-a-subflow-dc81903fe488",
+    "title": "SFMC Tips #249 : Marketing Cloud Next: Email Engagement Custom Report",
+    "date": "Feb 16"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/transactional-send-reconciliation-guaranteed-delivery-status-reporting-a0877520c3e3",
+    "title": "SFMC Tips #248 : Transactional Send Reconciliation: Guaranteed Delivery Status Reporting",
+    "date": "Feb 12"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-forcefully-exit-contacts-from-a-flow-bfb9bd74e071",
+    "title": "SFMC Tips #247 : Marketing Cloud Next: How to Forcefully Exit Audiences from a Flow",
+    "date": "Feb 10"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-email-sending-safeguard-for-sandbox-environments-7f285435afe1",
+    "title": "SFMC Tips #246 : Marketing Cloud Next: Email Sending Safeguard for Sandbox Environments",
+    "date": "Feb 7"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-run-event-triggered-flows-when-crm-records-change-a3a05691b427",
+    "title": "SFMC Tips #245 : Marketing Cloud Next: Run Event-Triggered Flows When CRM Records Change",
+    "date": "Feb 7"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-personalizing-on-demand-flows-using-apex-366692c7ce6a",
+    "title": "SFMC Tips #244 : Marketing Cloud Next: Personalizing On-Demand Flows Using Apex",
+    "date": "Feb 5"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-triggering-email-sends-with-activation-triggered-flows-6a2ad381713b",
+    "title": "SFMC Tips #243 : Marketing Cloud Next: Triggering Email Sends with Activation-Triggered Flows",
+    "date": "Feb 1"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-creating-a-free-digital-certificate-ssl-8e8b43becd9b",
+    "title": "SFMC Tips #242 : Marketing Cloud Next: Creating a Free Digital Certificate (SSL)",
+    "date": "Jan 27"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-find-the-url-of-an-uploaded-image-13f385e07ba5",
+    "title": "Marketing Cloud Next: How to Find the URL of an Uploaded Image",
+    "date": "Jan 25"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-cause-of-images-not-displaying-in-preview-b3e1e8c9576f",
+    "title": "SFMC Tips #240 : Marketing Cloud Next: Cause of Images Not Displaying in Preview",
+    "date": "Jan 23"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/agentforce-changes-to-data-library-retriever-queries-6be94d2e91fd",
+    "title": "SFMC Tips #239 : Agentforce: Changes to Data Library Retriever Queries",
+    "date": "Jan 22"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-personalization-agentforce-1741523f070f",
+    "title": "SFMC Tips #238 : Marketing Cloud Next: Personalization × Agentforce",
+    "date": "Jan 21"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/agentforce-trying-the-voice-enabled-agent-agentforce-voice-637c53685782",
+    "title": "SFMC Tips #237 : Agentforce: How to Enable Agentforce Voice in Enhanced Chat v2",
+    "date": "Jan 18"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/agentforce-adaptive-response-formats-with-flow-2a0cb5012f16",
+    "title": "SFMC Tips #236 : Agentforce: Adaptive Response Formats with Flow",
+    "date": "Jan 17"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/agentforce-adaptive-response-formats-with-apex-65adccf18547",
+    "title": "SFMC Tips #235 : Agentforce: Adaptive Response Formats with Apex",
+    "date": "Jan 15"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/agentforce-custom-lightning-types-editor-renderer-override-c4e408bc7819",
+    "title": "SFMC Tips #234 : Agentforce: Custom Lightning Types (Editor + Renderer Override)",
+    "date": "Jan 13"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-233-agentforce-custom-lightning-types-collection-renderer-override-c3b7ad840303",
+    "title": "SFMC Tips #233 : Agentforce: Custom Lightning Types (Collection Renderer Override)",
+    "date": "Jan 11"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-232-data-cloud-viewing-detailed-digital-wallet-consumption-data-436dc3bf4f13",
+    "title": "SFMC Tips #232 : Data Cloud: Viewing Detailed Digital Wallet Consumption Data",
+    "date": "Jan 9"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-231-agentforce-automatically-generating-summaries-with-a-record-triggered-flow-7b30a8b15635",
+    "title": "SFMC Tips #231 : Agentforce: Automatically Generating Summaries with a Record-Triggered Flow",
+    "date": "Jan 8"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-229-agentforce-integrating-a-service-agent-with-a-line-account-e99698ef8d9c",
+    "title": "SFMC Tips #230 : Agentforce: Integrating a Service Agent with a LINE Account",
+    "date": "Jan 7"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-229-agentforce-how-to-switch-the-service-agent-enhanced-chat-to-v2-1893565bf813",
+    "title": "SFMC Tips #229 : Agentforce: How to Switch the Service Agent Enhanced Chat to v2",
+    "date": "Jan 5"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-228-agentforce-branding-settings-for-the-embedded-chat-window-b6b4ddbadb30",
+    "title": "SFMC Tips #228 : Agentforce: Branding Settings for Enhanced Chat (v1 / v2)",
+    "date": "Jan 4"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-227-agentforce-detailed-settings-for-the-embedded-chat-window-cd3c375cc6ea",
+    "title": "SFMC Tips #227 : Agentforce: Advanced Settings for Enhanced Chat (v1 / v2)",
+    "date": "Jan 3"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-226-agentforce-escalating-from-an-ai-agent-to-a-live-chat-agent-0450bbb09115",
+    "title": "SFMC Tips #226 : Agentforce: Escalating from an AI Agent to a Live Chat Agent",
+    "date": "Jan 1"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-225-agentforce-how-to-set-up-live-human-chat-7e09f6ae051b",
+    "title": "SFMC Tips #225 : Agentforce: How to Set Up Live Human Chat",
+    "date": "Dec 31, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-224-agentforce-how-to-set-up-a-pre-chat-form-and-how-to-utilize-it-afterwards-6626d3d7907b",
+    "title": "SFMC Tips #224 : Agentforce: How to Set Up a Pre-Chat Form and How to Utilize It Afterwards",
+    "date": "Dec 29, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-223-agentforce-how-to-verify-whether-a-customers-email-address-is-valid-1c41a3e2021b",
+    "title": "SFMC Tips #223 : Agentforce: How to Verify Whether a Customer’s Email Address Is Valid",
+    "date": "Dec 27, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-222-agentforce-deploying-service-agents-to-your-website-8b5f38c6b0b9",
+    "title": "SFMC Tips #222 : Agentforce: Deploying Service Agents to Your Website",
+    "date": "Dec 26, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-221-agentforce-how-to-implement-a-service-agent-using-knowledge-ef7a9e0cdc6b",
+    "title": "SFMC Tips #221 : Agentforce: How to Implement a Service Agent Using Knowledge",
+    "date": "Dec 25, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/agentforce-permission-settings-for-unmetered-user-billing-in-agentforce-for-x-6a63df2af3a9",
+    "title": "SFMC Tips #220 : Agentforce: Permission Settings for Unmetered User Billing in Agentforce for X",
+    "date": "Dec 22, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-engagement-spring-26-release-highlights-a8d2c8f973de",
+    "title": "SFMC Tips #219 : Marketing Cloud Engagement: Spring ’26 Release Highlights",
+    "date": "Dec 20, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-spring-26-release-highlights-24c0c804b0cb",
+    "title": "SFMC Tips #218 : Marketing Cloud Next: Spring ’26 Release Highlights",
+    "date": "Dec 20, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-record-hunter-for-data-cloud-is-now-available-on-appexchange-8da6fb7769c4",
+    "title": "SFMC Tips #217 : Data Cloud : Record Hunter for Data Cloud Is Now Available on AppExchange",
+    "date": "Dec 17, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/restoration-of-records-cleared-from-a-data-extension-44a14d558197",
+    "title": "SFMC Tips #216 : Restoration of Records Cleared from a Data Extension",
+    "date": "Dec 15, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-useful-formula-field-tips-720203a8af53",
+    "title": "SFMC Tips #215 : Marketing Cloud Next: Useful Formula Field Tips",
+    "date": "Dec 13, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-local-file-upload-dab22b9dd918",
+    "title": "SFMC Tips #214 : Data Cloud: Local File Upload",
+    "date": "Dec 12, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-full-refresh-for-crm-and-sfmc-data-streams-62b30ba01b10",
+    "title": "SFMC Tips #213 : Data Cloud: Manual Full Refresh for CRM and SFMC Data Streams",
+    "date": "Dec 10, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-merge-fields-expression-4056d537af72",
+    "title": "SFMC Tips #212 : Marketing Cloud Next: Merge Fields {!$Expression.○○○}",
+    "date": "Dec 10, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-ad-hoc-filters-for-data-graphs-466c231740fe",
+    "title": "SFMC Tips #211 : Marketing Cloud Next: Ad Hoc Filters for Data Graphs",
+    "date": "Dec 9, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-engagement-integration-setup-6fae8c535337",
+    "title": "SFMC Tips #210 : Marketing Cloud Next: Engagement+ Setup Guide",
+    "date": "Dec 5, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-conducting-an-online-survey-smart-capture-form-c3fb77606565",
+    "title": "SFMC Tips #209 : Marketing Cloud Next: Conducting an Online Survey (Smart Capture-style Form)",
+    "date": "Dec 3, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-scheduling-identity-resolution-and-data-graph-a63aecf1904a",
+    "title": "SFMC Tips #208 : Marketing Cloud Next: Scheduling Identity Resolution and Data Graph",
+    "date": "Nov 29, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-configure-data-space-filters-6880c21093bd",
+    "title": "SFMC Tips #207 : Marketing Cloud Next: How to Configure Data Space Filters",
+    "date": "Nov 23, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/summary-of-data-retention-policy-for-data-extensions-4f46f53fa9e9",
+    "title": "SFMC Tips #206 : Summary of Data Retention Policy for Data Extensions",
+    "date": "Nov 20, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-batch-dmo-activation-has-arrived-0b44883c57e9",
+    "title": "SFMC Tips #205 : Data Cloud: Introduction of Batch DMO Activation (Manual Version)",
+    "date": "Nov 19, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-grouping-ranking-and-limit-functions-grl-9c8445541eb7",
+    "title": "SFMC Tips #204 : Data Cloud: Grouping, Ranking, and Limit Functions (GRL)",
+    "date": "Nov 18, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-use-dynamic-segments-06ee41977c2a",
+    "title": "SFMC Tips #203 : Marketing Cloud Next: How to Use Dynamic Segment",
+    "date": "Nov 17, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-engagement-based-segments-and-activation-targets-dd63ebb540ed",
+    "title": "SFMC Tips #202 : Data Cloud: Engagement-Based Segments and Activation Targets",
+    "date": "Nov 14, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-journey-activity-run-added-to-starter-data-bundle-bbbe73434dd0",
+    "title": "SFMC Tips #201 : Data Cloud: Journey Activity Run Added to Starter Data Bundle",
+    "date": "Nov 11, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-troubleshooting-when-emails-are-not-sent-647e5ccb2d40",
+    "title": "SFMC Tips #200 : Marketing Cloud Next: Troubleshooting When Emails Are Not Sent",
+    "date": "Nov 7, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/introducing-the-sql-query-activity-optimization-dashboard-6bd616d2c1e7",
+    "title": "SFMC Tips #199 : Introducing the SQL Query Activity Optimization Dashboard",
+    "date": "Oct 28, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/bulk-download-of-journey-history-data-from-the-interface-326ddced9207",
+    "title": "SFMC Tips #198 : Bulk Download of Journey History Data from the Interface",
+    "date": "Oct 28, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-app-for-searching-not-sent-records-a1b13ed4f196",
+    "title": "SFMC Tips #197 : Marketing Cloud App for Searching Not Sent Records",
+    "date": "Oct 24, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-testing-with-sandbox-22f23d92eef0",
+    "title": "SFMC Tips #196 : Marketing Cloud Next: Testing with Sandbox",
+    "date": "Oct 20, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-manually-deploying-updated-data-streams-8655b4a56296",
+    "title": "SFMC Tips #195 : Marketing Cloud Next: Manually Deploying Updated Data Streams",
+    "date": "Oct 18, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/summary-of-the-dreamforce-2025-marketing-keynote-e9f503e5f8cc",
+    "title": "SFMC Tips #194 : Summary of the Dreamforce 2025 Marketing Keynote",
+    "date": "Oct 17, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/agentforce-deploying-service-agents-on-cloudpages-external-sites-d4fb5edacb91",
+    "title": "SFMC Tips #193 : Agentforce: Deploying Service Agents on CloudPages (External Sites)",
+    "date": "Oct 16, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-content-builder-agent-4c426d6dec3a",
+    "title": "SFMC Tips #192 : Marketing Cloud Next: Content Builder Agent",
+    "date": "Oct 15, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-multiple-scoring-models-now-available-b697017c6fd8",
+    "title": "SFMC Tips #191 : Marketing Cloud Next: Multiple Scoring Models Now Available",
+    "date": "Oct 14, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-merge-fields-for-landing-pages-e07985ecc67f",
+    "title": "SFMC Tips #190 : Marketing Cloud Next: Merge Fields for Landing Pages",
+    "date": "Oct 13, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-hidden-fields-and-default-values-in-forms-a817f76c4b2e",
+    "title": "SFMC Tips #189 : Marketing Cloud Next: Hidden Fields and Default Values in Forms",
+    "date": "Oct 10, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-a-b-testing-with-the-path-experiment-element-5e39af4e0210",
+    "title": "SFMC Tips #188 : Marketing Cloud Next: A/B Testing with the “Path Experiment” Element",
+    "date": "Oct 9, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-marketing-performance-new-features-winter-26-bb3ed37ea55a",
+    "title": "SFMC Tips #187 : Marketing Cloud Next: Marketing Performance New Features — Winter ‘26",
+    "date": "Oct 9, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-upsert-a-record-for-a-person-flow-template-76fe6855686e",
+    "title": "SFMC Tips #186 : Marketing Cloud Next: Upsert a Record for a Person Flow Template",
+    "date": "Oct 8, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-determining-the-corresponding-crm-record-for-each-individual-3ad8b0d5a805",
+    "title": "SFMC Tips #185 : Marketing Cloud Next: Determine CRM Record for Individual",
+    "date": "Oct 7, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-configure-form-handlers-ed3e045adfad",
+    "title": "SFMC Tips #184 : Marketing Cloud Next: How to Configure Form Handlers",
+    "date": "Oct 7, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-smarter-identity-resolution-match-rules-ea432cbb5cc5",
+    "title": "SFMC Tips #183 : Marketing Cloud Next: Smarter Identity Resolution Match Rules",
+    "date": "Oct 6, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-on-demand-flows-with-rest-api-fbef5c58804e",
+    "title": "SFMC Tips #182 : Marketing Cloud Next: On-Demand Flows with REST API",
+    "date": "Oct 6, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-obtaining-an-access-token-for-the-rest-api-156eca392584",
+    "title": "SFMC Tips #181 : Marketing Cloud Next: Obtaining an Access Token for the REST API",
+    "date": "Oct 6, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-introduction-of-reusable-content-blocks-2b50a771fd8c",
+    "title": "SFMC Tips #180 : Marketing Cloud Next: Introduction of Reusable Content Blocks",
+    "date": "Oct 4, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-leveraging-real-time-segments-868c0f591205",
+    "title": "SFMC Tips #179 : Marketing Cloud Next: Leveraging Real-Time Segment",
+    "date": "Oct 1, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-new-segment-preview-feature-be716460c70f",
+    "title": "SFMC Tips #178 : Marketing Cloud Next: New Segment Preview Feature",
+    "date": "Sep 27, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-repeater-component-and-recommender-fb41b9c72ad0",
+    "title": "SFMC Tips #177 : Marketing Cloud Next: Repeater Component and Recommender",
+    "date": "Sep 26, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-initial-setup-for-personalization-be47931cef01",
+    "title": "SFMC Tips #176 : Marketing Cloud Next: First Steps in Personalization Setup",
+    "date": "Sep 25, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-understanding-the-basics-of-personalization-8bc5141ab807",
+    "title": "SFMC Tips #175 : Marketing Cloud Next: Understanding the Basics of Personalization",
+    "date": "Sep 24, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-how-to-set-up-dynamic-content-3c8ba2c53036",
+    "title": "SFMC Tips #174 : Marketing Cloud Next: How to Set Up Dynamic Content (Email and Landing Pages)",
+    "date": "Sep 17, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-engagement-winter-26-release-highlights-b32181d3e42a",
+    "title": "SFMC Tips #173 : Marketing Cloud Engagement: Winter ’26 Release Highlights",
+    "date": "Sep 13, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-setting-domains-for-email-tracking-links-1195027cb56d",
+    "title": "SFMC Tips #172 : Marketing Cloud Next: Setting Domains for Email Tracking Links",
+    "date": "Sep 11, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-landing-page-domain-settings-6367a4c1e663",
+    "title": "SFMC Tips #171 : Marketing Cloud Next: Setting Domains for Landing Pages",
+    "date": "Sep 9, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-hard-bounce-vs-soft-bounce-8106419bb008",
+    "title": "SFMC Tips #170 : Marketing Cloud Next: Hard Bounce and Soft Bounce",
+    "date": "Sep 6, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-troubleshooting-decision-splits-73e2ab3ac40f",
+    "title": "SFMC Tips #169 : Marketing Cloud Next: Troubleshooting Decision Splits",
+    "date": "Sep 4, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-disabling-consent-management-41d58a4acbef",
+    "title": "SFMC Tips #168 : Marketing Cloud Next: Disabling Consent Management",
+    "date": "Sep 3, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-waiting-for-events-in-form-triggered-flows-db08c98630cd",
+    "title": "SFMC Tips #167 : Marketing Cloud Next: Wait Until Event in Form-Triggered Flows",
+    "date": "Sep 2, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-understanding-which-email-addresses-are-used-for-sending-ca52aaace7d9",
+    "title": "SFMC Tips #166 : Marketing Cloud Next: Send a Single Message per Unified Individual in Segments",
+    "date": "Sep 1, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-winter-26-release-highlights-81240775f843",
+    "title": "SFMC Tips #165 : Marketing Cloud Next: Winter ’26 Release Highlights",
+    "date": "Aug 28, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-license-changes-effective-september-4-2025-bd69b78a128c",
+    "title": "SFMC Tips #164 : Data Cloud: License, Credits, and Permission Set Changes (Effective September 4…",
+    "date": "Aug 23, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-adding-from-addresses-reply-mail-management-8cc7bd2ce258",
+    "title": "SFMC Tips #163 : Marketing Cloud Next: Adding From Addresses & Reply Mail Management (RMM)",
+    "date": "Aug 22, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-identity-license-support-begins-3a1762e0d87b",
+    "title": "SFMC Tips #162 : Marketing Cloud Next: How to Configure Identity Users",
+    "date": "Aug 18, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-segment-member-verification-agent-18f64f4f22ba",
+    "title": "SFMC Tips #161 : Marketing Cloud Next: Segment Member Verification Agent",
+    "date": "Aug 15, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-attribute-library-navigation-enhancements-ed3235976679",
+    "title": "SFMC Tips #160 : Marketing Cloud Next: Attribute Library Navigation Enhancements",
+    "date": "Aug 15, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-tracked-links-for-website-traffic-sources-81593fde6581",
+    "title": "SFMC Tips #159 : Marketing Cloud Next: Tracked Links for Website Traffic Sources",
+    "date": "Aug 13, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-data-pipeline-credit-charges-now-free-891916c58c1f",
+    "title": "SFMC Tips #158 : Data Cloud: Data Pipeline Credit Charges Now Free",
+    "date": "Aug 13, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-debugging-segment-trigger-flows-80efef3c4e7a",
+    "title": "SFMC Tips #157 : Marketing Cloud Next: Debugging Segment Trigger Flows",
+    "date": "Aug 11, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-leveraging-website-engagement-0536c8e0e110",
+    "title": "SFMC Tips #156 : Marketing Cloud Next: Leveraging Website Engagement",
+    "date": "Aug 8, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-identity-resolution-using-identity-match-dmo-d5c47b599d5e",
+    "title": "SFMC Tips #155 : Marketing Cloud Next: Identity Resolution Using Identity Match DMO",
+    "date": "Aug 7, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-converting-prospects-via-flow-7f95b7f6270c",
+    "title": "SFMC Tips #154 : Marketing Cloud Next: Converting Prospects via Flow",
+    "date": "Aug 5, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-leveraging-prospects-8aa701aea983",
+    "title": "SFMC Tips #153 : Marketing Cloud Next: Leveraging Prospects",
+    "date": "Aug 5, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/message-usage-visibility-now-available-in-marketing-cloud-engagement-dcb477d08c66",
+    "title": "SFMC Tips #152 : Message Usage Visibility Now Available in Marketing Cloud Engagement+",
+    "date": "Jul 30, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-basic-setup-procedure-for-the-demo-environment-be441f7c37d8",
+    "title": "SFMC Tips #151 : Marketing Cloud Next: Setup Steps for SDO (Demo)",
+    "date": "Jul 23, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-custom-event-triggered-flow-7ae54b7798b5",
+    "title": "SFMC Tips #150 : Marketing Cloud Next: Custom Event-Triggered Flow",
+    "date": "Jul 18, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-use-the-rest-api-to-find-out-which-journeys-a-contact-is-in-de16f3f2a43f",
+    "title": "SFMC Tips #149 : How to Use the REST API to Find Out Which Journeys a Contact Is In",
+    "date": "Jul 16, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/introduction-to-the-marketing-cloud-journeys-for-salesforce-app-a5f1c6edde3c",
+    "title": "SFMC Tips #148 : Introduction to the Marketing Cloud Journeys for Salesforce App",
+    "date": "Jul 9, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-extension-usage-dashboard-launches-in-summer-25-402a06c3af77",
+    "title": "SFMC Tips #147 : “Data Extension Usage” Dashboard Launches in Summer ‘25",
+    "date": "Jul 2, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/no-more-need-for-the-final-wait-activity-in-journeys-e4ade2176b2b",
+    "title": "SFMC Tips #146 : No More Need for the Final Wait Activity in Journeys",
+    "date": "Jun 30, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-create-a-repeater-card-display-multi-column-using-ampscript-6d24e6f0762a",
+    "title": "SFMC Tips #145 : How to Create a “Repeater” Card Display (Multi-Column) Using AMPscript",
+    "date": "Jun 30, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-create-a-repeater-list-display-single-column-using-ampscript-750b4fd466de",
+    "title": "SFMC Tips #144 : How to Create a “Repeater” List Display (Single-Column) Using AMPscript",
+    "date": "Jun 26, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/salesforce-certified-data-cloud-consultant-exam-experience-19d4f55fbc31",
+    "title": "SFMC Tips #143 : Salesforce Certified Data Cloud Consultant Exam Experience",
+    "date": "Jun 20, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-leveraging-custom-unsubscribe-links-78649b12da0e",
+    "title": "SFMC Tips #142 : Marketing Cloud Next : Automating Consent Creation",
+    "date": "Jun 20, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-enhanced-marketing-performance-features-a8f691195c91",
+    "title": "SFMC Tips #141 : Marketing Cloud Next: The Need for Domain Warming",
+    "date": "Jun 18, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-email-authentication-steps-424e9cbbf76d",
+    "title": "SFMC Tips #140 : Marketing Cloud Next: Steps for Email Domain Authentication",
+    "date": "Jun 15, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-addition-of-never-option-for-recurring-flows-54a38c91c733",
+    "title": "SFMC Tips #139 : Marketing Cloud Next: Addition of “Never” Option for Recurring Flows",
+    "date": "Jun 13, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/the-future-of-marketing-cloud-engagement-session-overview-2794b9b3e83e",
+    "title": "SFMC Tips #138 : The Future of Marketing Cloud Engagement Session Overview",
+    "date": "Jun 13, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-next-retrieving-marketing-scores-in-agentforce-9eeb7acf3dfc",
+    "title": "SFMC Tips #137 : Marketing Cloud Next: Retrieving Marketing Scores in Agentforce",
+    "date": "Jun 12, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-marketing-cloud-sends-directly-from-crm-list-views-106cd7c2c465",
+    "title": "SFMC Tips #136 : Marketing Cloud Next: Marketing Cloud Sends Directly from CRM List Views",
+    "date": "Jun 11, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-einstein-powered-decision-element-in-flow-builder-26c34372b92c",
+    "title": "SFMC Tips #135 : Marketing Cloud Next: Einstein Decision Element in Flow Builder",
+    "date": "Jun 10, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-introducing-the-repeater-component-cc8017b01dc4",
+    "title": "SFMC Tips #134 : Marketing Cloud Next: Introducing the “Repeater” Component",
+    "date": "Jun 9, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-harnessing-reusable-expression-content-c9c26098cb5a",
+    "title": "SFMC Tips #133 : Marketing Cloud Next: Harnessing Reusable “Expression” Content",
+    "date": "Jun 9, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/understanding-object-activity-in-journey-builder-621c7fac53a2",
+    "title": "SFMC Tips #132 : Understanding Object Activity in Journey Builder",
+    "date": "Jun 8, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-tracking-external-websites-without-a-consent-banner-467326874412",
+    "title": "SFMC Tips #131 : Marketing Cloud Next: Tracking External Websites without a Consent Banner",
+    "date": "Jun 7, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-tracking-external-websites-with-a-consent-banner-2492904a799c",
+    "title": "SFMC Tips #130 : Marketing Cloud Next: Tracking External Websites with a Consent Banner",
+    "date": "Jun 7, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-tracking-marketing-cloud-landing-pages-without-a-consent-banner-d23c0ba6da52",
+    "title": "SFMC Tips #129 : Marketing Cloud Next: Tracking Landing Pages without a Consent Banner",
+    "date": "Jun 6, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-tracking-marketing-cloud-landing-pages-with-a-consent-banner-3672df5f9e73",
+    "title": "SFMC Tips #128 : Marketing Cloud Next: Tracking Landing Pages with a Consent Banner",
+    "date": "Jun 6, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-protecting-forms-with-recaptcha-3ffac7090282",
+    "title": "SFMC Tips #127 : Marketing Cloud Next: Protecting Forms with reCAPTCHA",
+    "date": "Jun 6, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-embedding-forms-into-external-sites-fe21918045e2",
+    "title": "SFMC Tips #126 : Marketing Cloud Next: Embedding Forms into External Sites",
+    "date": "Jun 4, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-waterfall-segment-fbe99d4af303",
+    "title": "SFMC Tips #125 : Marketing Cloud Next: Waterfall Segment",
+    "date": "Jun 3, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-automation-viewer-new-journey-activity-search-feature-added-a686a9f10fea",
+    "title": "SFMC Tips #124 : SFMC Automation Viewer: New Journey Activity Search Feature Added",
+    "date": "May 30, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/missing-data-reprocessing-feature-for-intelligence-reports-released-4b77b77ed928",
+    "title": "SFMC Tips #123 : Missing Data Reprocessing Feature for Intelligence Reports Released",
+    "date": "May 28, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-personalization-part-2-8d0efb6402af",
+    "title": "SFMC Tips #122 : Marketing Cloud Next: How to Leverage Event Data",
+    "date": "May 27, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-how-to-use-event-trigger-flows-803e1b41f007",
+    "title": "SFMC Tips #121 : Marketing Cloud Next: Standard Event-Triggered Flow",
+    "date": "May 26, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-engagement-summer-25-release-highlights-6af46f09309e",
+    "title": "SFMC Tips #120 : Marketing Cloud Engagement: Summer ’25 Release Highlights",
+    "date": "May 23, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-freedom-in-design-with-html-code-view-3673788cee5a",
+    "title": "SFMC Tips #119 : Marketing Cloud Next: Freedom in Design with HTML Code View",
+    "date": "May 21, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-agentforce-campaign-designer-708c127992b1",
+    "title": "SFMC Tips #118 : Marketing Cloud Next: Agentforce Campaign Designer (Discontinued)",
+    "date": "May 20, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-agentforce-campaign-creation-697c992adbe6",
+    "title": "SFMC Tips #117 : Marketing Cloud Next: Campaign Creation Agent",
+    "date": "May 19, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/new-agentforce-pricing-model-flex-credits-8d38793b7ef5",
+    "title": "SFMC Tips #116 : New Agentforce Pricing Model “Flex Credits”",
+    "date": "May 18, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-transforming-campaign-insights-with-marketing-performance-7c3f91f77304",
+    "title": "SFMC Tips #115 : Marketing Cloud Next: Marketing Performance Intelligence",
+    "date": "May 16, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-exploring-standard-reports-and-dashboards-3fdd7ec3194c",
+    "title": "SFMC Tips #114 : Marketing Cloud Next: Standard Reports and Dashboards (Retired)",
+    "date": "May 13, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-einstein-engagement-frequency-and-scoring-a8c75c105b47",
+    "title": "SFMC Tips #113 : Marketing Cloud Next: Einstein Engagement Frequency & Engagement Scoring",
+    "date": "May 10, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-understanding-default-scoring-rules-1f45d9c9333f",
+    "title": "SFMC Tips #112 : Marketing Cloud Next: Understanding Default Scoring Rules",
+    "date": "May 8, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/microsoft-follows-google-and-yahoo-with-new-sender-guidelines-b4e69f35dba5",
+    "title": "SFMC Tips #111 : Microsoft Follows Google and Yahoo with New “Sender Guidelines”",
+    "date": "May 5, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-a-practical-guide-to-enhanced-crm-record-pages-34650d05475b",
+    "title": "SFMC Tips #110 : Marketing Cloud Next: A Practical Guide to Enhanced CRM Record Pages",
+    "date": "May 4, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-convert-invalid-date-data-to-null-using-try-convert-602dd7df849f",
+    "title": "SFMC Tips #109 : How to Convert Invalid Date Data to NULL Using TRY_CONVERT",
+    "date": "May 2, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/changes-to-engagement-data-retention-policy-730-days-1935685b18af",
+    "title": "SFMC Tips #108 : Changes to Engagement Data Retention Policy: 730 Days",
+    "date": "May 1, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-understanding-the-preview-and-test-send-feature-a91b0f6a1ecf",
+    "title": "SFMC Tips #107 : Marketing Cloud Next: Understanding the “Preview and Test Send” Feature",
+    "date": "Apr 30, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-summer-25-release-highlights-4ad6f39c5d6d",
+    "title": "SFMC Tips #106 : Marketing Cloud Next: Summer ’25 Release Highlights",
+    "date": "Apr 25, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-how-to-resolve-errors-on-landing-pages-in-sdo-644dee92aa8e",
+    "title": "SFMC Tips #105 : Marketing Cloud Next: How to Resolve Errors on Landing Pages in SDO",
+    "date": "Apr 23, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-creating-a-signup-form-dcb43bbe9fea",
+    "title": "SFMC Tips #104 : Marketing Cloud Next: Creating a Signup Form",
+    "date": "Apr 23, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/bulk-data-ingest-api-the-solution-to-large-scale-data-import-challenges-33a0d7ef1a2a",
+    "title": "SFMC Tips #103 : Bulk Data Ingest API: The Solution to Large-Scale Data Import Challenges",
+    "date": "Apr 21, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-avoid-the-999-occurrences-bug-in-journey-builder-9e472753cf95",
+    "title": "SFMC Tips #102 : How to Avoid the “999 Occurrences” Bug in Journey Builder",
+    "date": "Apr 17, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-significant-price-reduction-for-data-pipeline-credit-usage-85e6a574d83e",
+    "title": "SFMC Tips #101 : Data Cloud: Significant Price Reduction for Data Pipeline Credit Usage",
+    "date": "Apr 16, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-official-quick-start-guide-initial-setup-3bf835cc889a",
+    "title": "SFMC Tips #100 : Marketing Cloud Next: Official Quick Start Guide — Initial Setup",
+    "date": "Apr 14, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/spring-25-spotlight-revolutionizing-mobilepush-with-test-sends-a2274920d18f",
+    "title": "SFMC Tips #99 : Spring ’25 Spotlight: Revolutionizing MobilePush with Test Sends",
+    "date": "Apr 11, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-how-to-utilize-engagement-data-a9b1f492b7d6",
+    "title": "SFMC Tips #98 : Marketing Cloud Next: How to Utilize Email Engagement Data",
+    "date": "Apr 10, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-how-to-check-engagement-data-5452bfbc1ae3",
+    "title": "SFMC Tips #97 : Marketing Cloud Next: How to Check Email Engagement Data",
+    "date": "Apr 7, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-personalization-1af8d9aa9026",
+    "title": "SFMC Tips #96 : Marketing Cloud Next: How to Configure Data Graphs",
+    "date": "Apr 3, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-content-creation-and-components-bf9046db9978",
+    "title": "SFMC Tips #95 : Marketing Cloud Next: Email Contents and Components",
+    "date": "Apr 1, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-selecting-a-brand-for-your-content-97706e59ed1b",
+    "title": "SFMC Tips #94 : Marketing Cloud Next: Brand Settings for Content",
+    "date": "Mar 31, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-search-emails-by-strings-in-content-builder-using-rest-api-fdb8492bc934",
+    "title": "SFMC Tips #93 : How to Search Emails by Strings in Content Builder Using REST API",
+    "date": "Mar 28, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-basics-of-segmentation-d240bb357d3d",
+    "title": "SFMC Tips #92 : Marketing Cloud Next: Basics of Segment",
+    "date": "Mar 27, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-einstein-send-time-optimization-sto-3cd4c104b162",
+    "title": "SFMC Tips #91 : Marketing Cloud Next: Einstein Send Time Optimization (STO)",
+    "date": "Mar 24, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-a-guide-to-consent-management-5ca95a1602a0",
+    "title": "SFMC Tips #90 : Marketing Cloud Next: A Guide to Consent Management",
+    "date": "Mar 21, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-understanding-the-basic-elements-of-flow-builder-1a749ecf92fa",
+    "title": "SFMC Tips #89 : Marketing Cloud Next: Basic Elements of Marketing Flow",
+    "date": "Mar 18, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-on-core-introduction-to-flow-builder-features-fd65d9ea0b97",
+    "title": "SFMC Tips #88 : Marketing Cloud Next: Basic Features of Marketing Flow",
+    "date": "Mar 13, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/execute-imports-without-import-definitions-using-the-rest-api-c261e04c3d55",
+    "title": "SFMC Tips #87 : Execute Imports Without Import Definitions Using the REST API",
+    "date": "Mar 11, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-configure-advanced-decision-splits-using-the-add-an-attribute-to-compare-feature-238ad29abb2b",
+    "title": "SFMC Tips #86 : How to Configure Advanced Decision Splits Using the “Add an Attribute to Compare”…",
+    "date": "Mar 4, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-a-guide-to-marketing-cloud-starter-data-bundle-cecea33400c4",
+    "title": "SFMC Tips #85 : Data Cloud: A Guide to Marketing Cloud Starter Data Bundle",
+    "date": "Feb 25, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-understanding-event-time-field-and-record-modified-field-12f1ecf55126",
+    "title": "SFMC Tips #84 : Data Cloud: Understanding Event Time Field and Record Modified Field",
+    "date": "Feb 21, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/date-vs-datetime-key-configuration-insights-for-data-cloud-users-71bfcc6a62e3",
+    "title": "SFMC Tips #83 : Data Cloud: Key Configuration Insights for Date vs. DateTime",
+    "date": "Feb 18, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/a-game-changing-update-in-data-cloud-faster-field-access-with-view-all-field-global-64614afe4a83",
+    "title": "SFMC Tips #82 : Data Cloud: Faster Field Access with View All Field (Global)",
+    "date": "Feb 16, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/understanding-how-to-update-data-extensions-in-data-cloud-25a44bf180b7",
+    "title": "SFMC Tips #81 : Data Cloud: Understanding How to Update Data Extension Integrations",
+    "date": "Feb 14, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/q-a-collection-on-interactive-email-forms-and-smart-capture-f432ca611c3e",
+    "title": "SFMC Tips #80 : Q&A Collection on Interactive Email Forms and Smart Capture",
+    "date": "Feb 12, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-transfer-files-from-google-cloud-storage-to-marketing-cloud-f2306d6434f8",
+    "title": "SFMC Tips #79 : How to Transfer Files from Google Cloud Storage to Marketing Cloud",
+    "date": "Feb 6, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/data-cloud-marketing-cloud-engagement-integration-tips-9e160167cda8",
+    "title": "SFMC Tips #78 : Data Cloud: Marketing Cloud Integration Tips Summary",
+    "date": "Feb 5, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-search-and-view-records-at-the-record-level-in-data-cloud-7ee19a3ae900",
+    "title": "SFMC Tips #77 : Data Cloud: Searching and Viewing Records at the Record Level",
+    "date": "Feb 4, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-spring-25-release-key-highlights-and-insights-51c43496c538",
+    "title": "SFMC Tips #76 : Marketing Cloud Engagement: Spring ’25 Release Highlights",
+    "date": "Feb 4, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/understanding-the-wait-by-attribute-activity-in-journey-builder-6f26b95f1df6",
+    "title": "SFMC Tips #75 : Understanding the Wait By Attribute Activity in Journey Builder",
+    "date": "Jan 30, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-update-content-referenced-by-contentblockbyid-c56741e90aa5",
+    "title": "SFMC Tips #74 : How to Update Content Referenced by ContentBlockById",
+    "date": "Jan 23, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/automating-extract-not-sent-and-storing-in-a-data-extension-5d88794a7f76",
+    "title": "SFMC Tips #73 : Automating Extract Not Sent and Storing in a Data Extension",
+    "date": "Jan 16, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/error-handling-with-ampscript-the-raiseerror-function-10c4fb343173",
+    "title": "SFMC Tips #72 : Error Handling with AMPscript: The RaiseError Function",
+    "date": "Jan 9, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/introduction-to-einstein-content-testing-62a8477656ff",
+    "title": "SFMC Tips #71 : Introduction to Einstein Content Testing",
+    "date": "Jan 3, 2025"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/einstein-engagement-frequency-demystified-601bd50a84cc",
+    "title": "SFMC Tips #70 : Einstein Engagement Frequency Demystified",
+    "date": "Dec 25, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-transfer-files-from-amazon-s3-to-marketing-cloud-85f9af08b16f",
+    "title": "SFMC Tips #69 : How to Transfer Files from Amazon S3 to Marketing Cloud",
+    "date": "Dec 19, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/understanding-wait-activity-behavior-at-the-end-of-a-journey-ad08e68ff43d",
+    "title": "SFMC Tips #68 : Understanding Wait Activity Behavior at the End of a Journey",
+    "date": "Dec 12, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/common-pitfalls-in-marketing-cloud-connect-36f34db6b85a",
+    "title": "SFMC Tips #67 : Common Pitfalls in Marketing Cloud Connect",
+    "date": "Dec 6, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-retrieve-all-entry-source-information-using-rest-api-d595e48e73e7",
+    "title": "SFMC Tips #66 : How to Retrieve All Entry Source Information Using REST API",
+    "date": "Nov 27, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/changes-to-engagement-data-retention-policy-180-days-d7d31cc837c5",
+    "title": "SFMC Tips #65 : Changes to Engagement Data Retention Policy: 180 Days",
+    "date": "Nov 20, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/understanding-field-mapping-in-marketing-cloud-connect-16c7cc253b29",
+    "title": "SFMC Tips #64 : Understanding Field Mapping in Marketing Cloud Connect",
+    "date": "Nov 18, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/relationship-between-profile-attributes-and-data-extension-fields-3edefdc64240",
+    "title": "SFMC Tips #63 : Relationship Between Profile Attributes and Data Extension Fields",
+    "date": "Nov 12, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-trigger-journey-builder-with-data-actions-73d26c5810a7",
+    "title": "SFMC Tips #62 : Data Cloud: Triggering Journey Builder with Data Actions",
+    "date": "Nov 8, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-download-compressed-journey-history-676042a5ac6d",
+    "title": "SFMC Tips #61 : How to Download Compressed Journey History",
+    "date": "Oct 29, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/multilingual-support-for-einstein-ai-generated-subject-lines-and-body-83fff13c7092",
+    "title": "SFMC Tips #60 : Multilingual Support for Einstein AI Generated Subject Lines and Body",
+    "date": "Oct 23, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-check-the-update-and-change-history-of-journey-emails-6802f45dc051",
+    "title": "SFMC Tips #59 : How to Check the Update and Change History of Journey Emails",
+    "date": "Oct 17, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/winter-24-release-highlights-notable-new-features-in-marketing-cloud-f9ab85aac8b1",
+    "title": "SFMC Tips #58 : Marketing Cloud Engagement: Winter ’25 Release Highlights",
+    "date": "Oct 1, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-app-to-release-contacts-from-wait-activity-via-api-d5c787070819",
+    "title": "SFMC Tips #57 : Marketing Cloud App to Release Contacts from Wait Activity via API",
+    "date": "Sep 23, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-find-duplicate-records-in-the-same-field-using-sql-560269365587",
+    "title": "SFMC Tips #56 : How to Find Duplicate Records in the Same Field Using SQL",
+    "date": "Sep 12, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-retrieve-the-distribution-of-list-detective-entries-in-a-data-extension-98c35be50a12",
+    "title": "SFMC Tips #55 : How to Retrieve the Distribution of List Detective Entries in a Data Extension",
+    "date": "Sep 12, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/troubleshooting-zero-record-issues-with-anniversary-date-filters-in-salesforce-marketing-cloud-4dfb45b1f9e3",
+    "title": "SFMC Tips #54 : Troubleshooting Zero Record Issues with Anniversary Date Filters in Email Studio",
+    "date": "Sep 8, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-retrieve-all-sql-queries-in-salesforce-marketing-cloud-using-rest-api-3d5872c2c1ed",
+    "title": "SFMC Tips #53 : How to Retrieve All SQL Queries Using REST API",
+    "date": "Sep 1, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/sfmc-tips-52-email-addresses-removed-by-the-deduplication-feature-in-email-studio-a1856b8c5447",
+    "title": "SFMC Tips #52 : Email Addresses Removed by the Deduplication Feature in Email Studio",
+    "date": "Aug 25, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/evaluating-einstein-send-time-optimization-6c769e0972b4",
+    "title": "SFMC Tips #51 : Evaluating Einstein Send Time Optimization",
+    "date": "Aug 14, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/handling-plain-text-versions-of-interactive-email-forms-97b764c40607",
+    "title": "SFMC Tips #50 : Handling Plain Text Versions of Interactive Email Forms",
+    "date": "Jul 31, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/introducing-the-new-feature-recommended-automation-start-times-259b17962f37",
+    "title": "SFMC Tips #49 : Introducing the New Feature: Recommended Automation Start Times",
+    "date": "Jul 11, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/new-data-copy-or-import-activity-arrives-in-automation-studio-e941f123f7a5",
+    "title": "SFMC Tips #48 : New Data Copy or Import Activity Arrives in Automation Studio",
+    "date": "Jul 10, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-handle-scheduling-issues-in-the-new-version-of-journey-builder-f6b1c19bb2f1",
+    "title": "SFMC Tips #47 : How to Handle Scheduling Issues in the New Version of Journey Builder",
+    "date": "Jul 2, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-retrieve-the-version-id-from-the-journey-canvas-in-journey-builder-85771539302c",
+    "title": "SFMC Tips #46 : How to Retrieve the Version ID from the Journey Canvas in Journey Builder",
+    "date": "Jun 18, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-bulk-retrieve-execution-times-of-automation-activities-in-each-step-of-automation-studio-16903798fc9a",
+    "title": "SFMC Tips #45 : How to Bulk Retrieve Automation Activity Execution Times",
+    "date": "Jun 15, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/creating-a-new-data-extension-using-the-rest-api-e83c38213127",
+    "title": "SFMC Tips #44 : Creating a New Data Extension Using the REST API",
+    "date": "Jun 10, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/fine-tuning-permissions-for-marketing-cloud-sftp-users-81579b56d72a",
+    "title": "SFMC Tips #43 : Fine-tuning Permissions for Marketing Cloud SFTP Users",
+    "date": "May 31, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/summer-24-release-highlights-notable-new-features-in-marketing-cloud-0d9ba139c988",
+    "title": "SFMC Tips #42 : Marketing Cloud Engagement: Summer ’24 Release Highlights",
+    "date": "May 30, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-delete-records-from-data-extensions-and-auto-suppression-lists-8bf0d5639a44",
+    "title": "SFMC Tips #41 : How to Delete Records from Data Extensions and Auto-Suppression Lists",
+    "date": "May 26, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-check-the-job-id-in-journey-builder-b75428447815",
+    "title": "SFMC Tips #40 : How to Check the Job ID in Journey Builder",
+    "date": "May 19, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/efficient-data-extension-creation-with-automation-studio-scripting-8257c4e9b324",
+    "title": "SFMC Tips #39 : Efficient Data Extension Creation with Automation Studio Scripting",
+    "date": "May 8, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-filter-data-obtained-by-a-script-that-replaces-the-values-of-all-subscribers-45300f420840",
+    "title": "SFMC Tips #38 : How to Filter Data Obtained by a Script that Replaces the Values of All Subscribers",
+    "date": "Apr 9, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/bulk-replacement-of-subscriber-status-for-all-subscribers-using-ssjs-1fe46b3bf4f5",
+    "title": "SFMC Tips #37 : Bulk Replacement of “Subscriber Status” for All Subscribers using SSJS",
+    "date": "Apr 4, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/new-google-consent-settings-for-marketing-cloud-advertising-b0ec32fe0ef9",
+    "title": "SFMC Tips #36 : New Google Consent Settings for Marketing Cloud Advertising",
+    "date": "Apr 1, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/understanding-update-contact-activity-in-journey-builder-02820fdd853b",
+    "title": "SFMC Tips #35 : Understanding Update Contact Activity in Journey Builder",
+    "date": "Mar 28, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/verification-of-actions-after-email-address-change-and-relationship-with-held-status-7b25d282a9cb",
+    "title": "SFMC Tips #34 : Verification of Actions After Email Address Change and Relationship with “Held”…",
+    "date": "Mar 22, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-set-layout-within-layout-in-content-builder-21720f80a1d1",
+    "title": "SFMC Tips #33 : How to Set Layout Within Layout in Content Builder",
+    "date": "Mar 13, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/automation-studio-performance-boosted-by-162-aff6be525d7c",
+    "title": "SFMC Tips #32 : Automation Studio Performance Boosted by 162%",
+    "date": "Mar 7, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-add-records-to-a-filtered-data-extension-64857d3fc4ff",
+    "title": "SFMC Tips #31 : How to Add Records to a Filtered Data Extension",
+    "date": "Feb 29, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/pause-and-resume-multiple-journeys-from-the-journey-dashboard-2325894d8693",
+    "title": "SFMC Tips #30 : Pause and Resume Multiple Journeys from the Journey Dashboard",
+    "date": "Feb 27, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/discussing-einstein-send-time-optimization-6dd825a5d2b3",
+    "title": "SFMC Tips #29 : Discussing Einstein Send Time Optimization",
+    "date": "Feb 23, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/marketing-cloud-app-to-validate-list-detective-ab299d318492",
+    "title": "SFMC Tips #27 : Marketing Cloud App to Validate List Detective",
+    "date": "Feb 19, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-disable-list-detective-enabling-the-custom-list-detective-feature-1e3dd4426add",
+    "title": "SFMC Tips #26 : How to Disable List Detective: Enabling the ‘Custom List Detective’ Feature",
+    "date": "Feb 16, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/self-searching-for-email-addresses-targeted-by-list-detective-1689c90ec1b7",
+    "title": "SFMC Tips #25 : Self-Searching for Email Addresses Targeted by List Detective",
+    "date": "Feb 15, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-check-the-change-history-of-journey-builder-1e4015bba67c",
+    "title": "SFMC Tips #24 : How to Check the Change History of Journey Builder",
+    "date": "Feb 14, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/spring-24-release-highlights-notable-new-features-in-marketing-cloud-8c769e8402b6",
+    "title": "SFMC Tips #23 : Marketing Cloud Engagement: Spring ’24 Release Highlights",
+    "date": "Feb 7, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/searching-for-contact-key-from-email-address-in-the-marketing-cloud-app-0f026db10e4a",
+    "title": "SFMC Tips #22 : Searching for Contact Key from Email Address in the Marketing Cloud App",
+    "date": "Feb 5, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-modify-email-content-within-the-same-version-after-activating-a-journey-5dee6fced96c",
+    "title": "SFMC Tips #21 : How to Update Email Content After a Journey Is Active",
+    "date": "Feb 2, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/extracting-subscribers-who-havent-opened-emails-in-the-last-180-days-using-automation-studio-27c0d1c9bb80",
+    "title": "SFMC Tips #20 : Extracting Subscribers Who Haven’t Opened Emails in the Last 180 Days Using…",
+    "date": "Jan 31, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/apples-mail-privacy-protection-mpp-a-overview-of-the-september-2021-release-1054a719f8cd",
+    "title": "Apple’s Mail Privacy Protection (MPP) — A Overview of the September 2021 Release",
+    "date": "Jan 31, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/automatically-sending-another-email-when-clicking-a-link-in-an-email-sent-from-marketing-cloud-23c62e4799d4",
+    "title": "SFMC Tips #18 : Automatically Sending Another Email When Clicking a Link in an Email Sent from…",
+    "date": "Jan 22, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/exploring-the-five-default-email-reports-in-intelligence-reports-for-engagement-c43f8ed71a0e",
+    "title": "SFMC Tips #17 : Exploring the Five Default Email Reports in Intelligence Reports for Engagement",
+    "date": "Jan 16, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-exclude-subscribers-with-a-specific-email-domain-in-salesforce-marketing-cloud-c45cd4096cbe",
+    "title": "SFMC Tips #16 : How to Exclude Subscribers with a Specific Email Domain in Salesforce Marketing…",
+    "date": "Jan 9, 2024"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/batch-event-api-allows-entry-of-up-to-100-contacts-in-journey-builder-with-a-single-request-9655b12b72dd",
+    "title": "SFMC Tips #15 : Batch Event API Allows Entry of up to 100 Contacts in Journey Builder with a Single…",
+    "date": "Dec 28, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/dynamically-setting-reply-to-email-addresses-for-each-contact-in-salesforce-marketing-cloud-11f541c0d57f",
+    "title": "SFMC Tips #14 : Dynamically Setting Reply-to Email Addresses for Each Contact",
+    "date": "Dec 27, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-identify-reasons-for-failed-email-sends-in-journey-builder-3731fde54ec5",
+    "title": "SFMC Tips #13 : How to Identify Reasons for Failed Email Sends in Journey Builder",
+    "date": "Dec 26, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/extracting-contacts-passing-through-wait-activities-using-journey-builder-rest-api-8d22ff0048a0",
+    "title": "Extracting Contacts Passing Through Wait activities Using Journey Builder REST API",
+    "date": "Dec 21, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-execute-basic-setup-for-salesforce-marketing-clouds-rest-api-using-talend-api-tester-c332b398e970",
+    "title": "SFMC Tips #11 : How to Execute Basic Setup for Salesforce Marketing Cloud’s REST API using Talend…",
+    "date": "Dec 20, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/playful-tricks-to-snatch-journey-builder-activity-ids-easily-2c208c6a41b2",
+    "title": "SFMC Tips #10 : Playful Tricks to Snatch Journey Builder Activity IDs Easily",
+    "date": "Dec 19, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-redirect-url-links-in-emails-based-on-click-time-f007c7febd81",
+    "title": "SFMC Tips #9 : How to Redirect URL Links in Emails Based on Click Time",
+    "date": "Dec 13, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/customizing-email-content-based-on-send-time-with-ampscript-01d7c2560f3d",
+    "title": "SFMC Tips #8 : Customizing Email Content Based on Send Time with AMPscript",
+    "date": "Dec 12, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/safeguarding-your-decision-splits-from-invalid-attribute-woes-in-journey-builder-fff6f4555e7e",
+    "title": "SFMC Tips #7 : Safeguarding Your Decision Splits from “Invalid Attribute” Woes in Journey Builder",
+    "date": "Dec 5, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/the-impact-of-closing-the-window-during-email-content-saving-in-journey-builder-07015caccc16",
+    "title": "SFMC Tips #6 : The Impact of Closing the Window During Email Content Saving in Journey Builder",
+    "date": "Nov 24, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/enhancing-your-journey-builder-experience-methods-for-testing-journeys-before-activation-e776906e0da2",
+    "title": "SFMC Tips #5 : Enhancing Your Journey Builder Experience: Methods for Testing Journeys Before…",
+    "date": "Nov 20, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/avoiding-forced-exits-for-contacts-without-email-addresses-in-journey-builder-e8c7661255e0",
+    "title": "SFMC Tips #4 : Avoiding Forced Exits for Contacts Without Email Addresses in Journey Builder",
+    "date": "Nov 13, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/what-types-of-contacts-can-pass-through-journey-builders-email-activity-d240bff65fff",
+    "title": "SFMC Tips #3 : Which Types of ‘Contacts Unable to Receive Emails’ Can Pass Through Journey…",
+    "date": "Nov 10, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/lets-try-using-the-trailhead-simulator-for-salesforce-marketing-cloud-246c42af2aa9",
+    "title": "SFMC Tips #2 : Let’s Try Salesforce Marketing Cloud with Trailhead Simulator",
+    "date": "Nov 8, 2023"
+  },
+  {
+    "url": "https://medium.com/@marketingcloudtips/how-to-find-sql-query-activities-that-take-more-than-15-minutes-processing-time-on-automation-7af2df10efca",
+    "title": "SFMC Tips #1 : How to find SQL query activities that take more than 15 minutes processing time on…",
+    "date": "Nov 6, 2023"
+  }
+]

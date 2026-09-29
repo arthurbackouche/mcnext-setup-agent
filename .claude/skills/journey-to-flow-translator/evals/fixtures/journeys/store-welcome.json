@@ -1,0 +1,265 @@
+{
+ "id": "3d8a5f12-6e94-4b71-9a2c-1f7d0c8e4b56",
+ "key": "6c91d4a7",
+ "name": "Store Welcome Journey",
+ "version": 7,
+ "status": "Published",
+ "entryMode": "SingleEntryAcrossAllVersions",
+ "defaults": {
+  "email": [
+   "{{Event.AutomationAud-7b3c9e02-4a1f-4d6e-8b90-2c5f1a3d6e77.\"Email\"}}"
+  ],
+  "mobileNumber": [
+   "x"
+  ]
+ },
+ "activity": {
+  "lastContactProcessed": "2026-09-21T22:03:03"
+ },
+ "triggers": [
+  {
+   "type": "AutomationAudience",
+   "metaData": {
+    "eventDefinitionKey": "AutomationAud-7b3c9e02-4a1f-4d6e-8b90-2c5f1a3d6e77"
+   }
+  }
+ ],
+ "exits": [],
+ "goals": [],
+ "activities": [
+  {
+   "key": "EMAILV2-2",
+   "name": "Store_Welcome_eDM4_20241122",
+   "type": "EMAILV2",
+   "outcomes": [
+    {
+     "key": "EMAILV2-2o",
+     "next": "WAITBYDURATION-20"
+    }
+   ],
+   "configurationArguments": {
+    "triggeredSend": {
+     "emailId": 40004,
+     "emailSubject": "%%=ProperCase(@ClientName)=%%! Welcome to our store",
+     "publicationListId": 1145,
+     "sendClassificationId": "88d8",
+     "senderProfileId": "d444"
+    }
+   }
+  },
+  {
+   "key": "WAITBYDURATION-23",
+   "name": "1 minute",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-23o"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 1,
+    "waitUnit": "MINUTES",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  },
+  {
+   "key": "SMSSYNC-2",
+   "name": "Store_Welcome_NZ",
+   "type": "SMSSYNC",
+   "outcomes": [
+    {
+     "key": "SMSSYNC-2o",
+     "next": "WAITBYDURATION-22"
+    }
+   ],
+   "configurationArguments": {
+    "assetId": 50005,
+    "fromName": "30000",
+    "isOptIn": false,
+    "honorBlackoutWindowEnum": 2,
+    "mobileBlackoutWindowStartTime": "18:00",
+    "mobileBlackoutWindowEndTime": "08:00"
+   },
+   "metaData": {
+    "store": {
+     "selectedContentBuilderMessage": "%%[SET @StoreName = Lookup('Account_Salesforce','Name','Id',@StoreID)]%%Kia Ora...",
+     "messageConfiguration": {
+      "selectedCode": {
+       "countryCode": "NZ"
+      }
+     }
+    }
+   }
+  },
+  {
+   "key": "SMSSYNC-1",
+   "name": "Store_Welcome_AU",
+   "type": "SMSSYNC",
+   "outcomes": [
+    {
+     "key": "SMSSYNC-1o",
+     "next": "WAITBYDURATION-21"
+    }
+   ],
+   "configurationArguments": {
+    "assetId": 50006,
+    "fromName": "15550000000",
+    "isOptIn": false,
+    "honorBlackoutWindowEnum": 2,
+    "mobileBlackoutWindowStartTime": "18:00",
+    "mobileBlackoutWindowEndTime": "11:00"
+   },
+   "metaData": {
+    "store": {
+     "selectedContentBuilderMessage": "%%[SET @StoreName = Lookup('Account_Salesforce','Name','Id',@StoreID)]%%Hey...",
+     "messageConfiguration": {
+      "selectedCode": {
+       "countryCode": "AU"
+      }
+     }
+    }
+   }
+  },
+  {
+   "key": "WAITBYDURATION-20",
+   "name": "1 minute",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-20o",
+     "next": "MULTICRITERIADECISIONV2-6"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 1,
+    "waitUnit": "MINUTES",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  },
+  {
+   "key": "MULTICRITERIADECISIONV2-6",
+   "name": "Has phone?",
+   "type": "MULTICRITERIADECISION",
+   "outcomes": [
+    {
+     "key": "default_path_1",
+     "next": "MULTICRITERIADECISIONV2-8",
+     "metaData": {
+      "label": "Yes"
+     }
+    },
+    {
+     "key": "remainder_path",
+     "next": "WAITBYDURATION-24",
+     "metaData": {
+      "label": "No"
+     }
+    }
+   ],
+   "configurationArguments": {
+    "criteria": {
+     "default_path_1": "<FilterDefinition><ConditionSet Operator=\"AND\"><Condition IsEphemeralAttribute=\"true\" Key=\"Event.AutomationAud-7b3c9e02-4a1f-4d6e-8b90-2c5f1a3d6e77.Phone\" Operator=\"IsNotNull\"><Value><![CDATA[]]></Value></Condition></ConditionSet></FilterDefinition>"
+    }
+   }
+  },
+  {
+   "key": "MULTICRITERIADECISIONV2-8",
+   "name": "Country",
+   "type": "MULTICRITERIADECISION",
+   "outcomes": [
+    {
+     "key": "default_path_1",
+     "next": "SMSSYNC-1",
+     "metaData": {
+      "label": "Australia"
+     }
+    },
+    {
+     "key": "1e999ccb",
+     "next": "SMSSYNC-2",
+     "metaData": {
+      "label": "New Zealand"
+     }
+    },
+    {
+     "key": "remainder_path",
+     "next": "WAITBYDURATION-23",
+     "metaData": {
+      "label": "Remainder"
+     }
+    }
+   ],
+   "configurationArguments": {
+    "criteria": {
+     "default_path_1": "<FilterDefinition><ConditionSet Operator=\"AND\"><Condition IsEphemeralAttribute=\"true\" Key=\"Event.AutomationAud-7b3c9e02-4a1f-4d6e-8b90-2c5f1a3d6e77.Country\" Operator=\"Equal\"><Value><![CDATA[Australia]]></Value></Condition><Condition IsEphemeralAttribute=\"true\" Key=\"Event.AutomationAud-7b3c9e02-4a1f-4d6e-8b90-2c5f1a3d6e77.ItemID\" Operator=\"Equal\" ValueIsReference=\"true\"><Value><![CDATA[Store_Customer_Master.ItemID]]></Value></Condition><Condition Key=\"Store_Customer_Master.ItemInactive\" Operator=\"Is\"><Value><![CDATA[false]]></Value></Condition></ConditionSet></FilterDefinition>",
+     "1e999ccb": "<FilterDefinition><ConditionSet Operator=\"AND\"><Condition IsEphemeralAttribute=\"true\" Key=\"Event.AutomationAud-7b3c9e02-4a1f-4d6e-8b90-2c5f1a3d6e77.Country\" Operator=\"Equal\"><Value><![CDATA[New Zealand]]></Value></Condition><Condition IsEphemeralAttribute=\"true\" Key=\"Event.AutomationAud-7b3c9e02-4a1f-4d6e-8b90-2c5f1a3d6e77.ItemID\" Operator=\"Equal\" ValueIsReference=\"true\"><Value><![CDATA[Store_Customer_Master.ItemID]]></Value></Condition><Condition Key=\"Store_Customer_Master.ItemInactive\" Operator=\"Is\"><Value><![CDATA[false]]></Value></Condition></ConditionSet></FilterDefinition>"
+    }
+   }
+  },
+  {
+   "key": "WAITBYDURATION-24",
+   "name": "1 minute",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-24o"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 1,
+    "waitUnit": "MINUTES",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  },
+  {
+   "key": "WAITBYDURATION-21",
+   "name": "1 minute",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-21o"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 1,
+    "waitUnit": "MINUTES",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  },
+  {
+   "key": "WAITBYDURATION-22",
+   "name": "1 minute",
+   "type": "WAIT",
+   "outcomes": [
+    {
+     "key": "WAITBYDURATION-22o"
+    }
+   ],
+   "configurationArguments": {
+    "waitDuration": 1,
+    "waitUnit": "MINUTES",
+    "specifiedTime": "00:00",
+    "timeZone": "AUS Eastern Standard Time"
+   },
+   "metaData": {
+    "waitType": "duration"
+   }
+  }
+ ]
+}

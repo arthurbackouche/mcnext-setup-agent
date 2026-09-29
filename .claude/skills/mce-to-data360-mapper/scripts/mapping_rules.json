@@ -1,0 +1,277 @@
+{
+ "_comment": "Order matters: first matching tier rule wins. 'name' and 'path' are regex. 'skip_if' is a regex on name that downgrades to Skip inside the tier.",
+ "tiers": [
+  {
+   "tier": "B",
+   "approach": "Standard DMO",
+   "name": "^(Hard_Bounce|Soft_Bounce)",
+   "target": "ssot__ContactPointEmail__dlm",
+   "rationale": "Bounce status enrichment. Raw events already flow via MCE starter bundle into ssot__EmailEngagement__dlm."
+  },
+  {
+   "tier": "A",
+   "approach": "Reconcile only",
+   "name": "(_Master$|_Master_Deduped$|^All_.*_Data$|^Contact_with_Mobile|^Leads_Master$|^Digital_Login_Master)",
+   "target": "",
+   "rationale": "Copy of CRM or source-system master data already ingested via CRM Home DLOs or source connectors. Use for row-count reconciliation only."
+  },
+  {
+   "tier": "D",
+   "approach": "Standard DMO",
+   "path": "/ Lead",
+   "skip_if": "(Config|Log|Staging|Debug)",
+   "target": "ssot__Lead__dlm + ssot__ContactPointEmail__dlm",
+   "rationale": "Marketing-acquired leads not yet in CRM (Lead folder)."
+  },
+  {
+   "tier": "D",
+   "approach": "Standard DMO",
+   "name": "(Leads?_|Leads$|.*Leads$|SocialLead)",
+   "skip_if": "(Config|Log|Staging|Debug)",
+   "target": "ssot__Lead__dlm + ssot__ContactPointEmail__dlm",
+   "rationale": "Marketing-acquired leads not yet in CRM."
+  },
+  {
+   "tier": "C",
+   "approach": "Standard DMO",
+   "name": "(Subscription Sync|Unsub_Log|Unsubscribe_Log|SMS_OptOut|Opt_Out|_MobileSubscription|_MobileLineSubscription|_ChatMessaging|_WhatsAppSubscription|Contact_Deletion)",
+   "target": "ssot__CommunicationSubscriptionConsent__dlm",
+   "rationale": "Consent and channel subscription state. SFMC is system of record."
+  },
+  {
+   "tier": "C",
+   "approach": "Standard DMO",
+   "name": "(_MobileAddress|_MobileLine|_PushAddress|_PushTag|_WhatsAppAddress|MobileNumber|Formatted_Mobile)",
+   "target": "ssot__ContactPointPhone__dlm",
+   "rationale": "Channel address for phone, push and WhatsApp."
+  },
+  {
+   "tier": "C",
+   "approach": "Standard DMO",
+   "name": "EmailAddress_Sync",
+   "target": "ssot__ContactPointEmail__dlm",
+   "rationale": "Email address deltas."
+  },
+  {
+   "tier": "E",
+   "approach": "Standard DMO",
+   "name": "^(IGO_|PI_)",
+   "target": "see personalization_targets",
+   "rationale": "Personalization (Interaction Studio) catalog and behaviour. Ingest only if MCP still licensed."
+  },
+  {
+   "tier": "F",
+   "approach": "Custom DMO",
+   "name": "^Einstein_",
+   "target": "Einstein_Engagement_Score__dlm (Profile)",
+   "rationale": "Einstein Engagement Scoring output. No standard home."
+  },
+  {
+   "tier": "G",
+   "approach": "Custom DMO",
+   "name": "(Exclusion|Inclusion|_Valid$)",
+   "target": "Marketing_Exclusion__dlm (Other)",
+   "rationale": "Suppression / inclusion rules keyed on location, category or contact."
+  },
+  {
+   "tier": "X",
+   "approach": "Skip",
+   "name": "(Sender_Profiles|Authenticated_Domains|DNS_Register|DynamicTemplate|OfferLinks|OnlineDetails|CloudPages_DataExtension|ExpressionBuilderAttributes|Failed_Emails_Reason|RMM_Reply|Bulk_Deployments)",
+   "target": "",
+   "rationale": "Send-time configuration. Lives in MC Next config, not data."
+  },
+  {
+   "tier": "H2",
+   "approach": "Custom DMO",
+   "name": "(Config$|_Log$|SendLog|Log$|Lookup$|LastOffered|Featured.*Key|Stg|StgingDE|LocationList|StoreList|Processed$|Suppression$|ReentryEligibility|Async$|Previous$|Analysis$|Audit|Payment_Gateway)",
+   "path": "03 Journeys|Data Extensions$",
+   "target": "Journey_Send_Log__dlm (Engagement)",
+   "rationale": "Journey send history. Consolidate all logs into one engagement DMO."
+  },
+  {
+   "tier": "H1",
+   "approach": "Custom DMO",
+   "path": "03 Journeys",
+   "target": "Journey_Entry__dlm (Engagement)",
+   "rationale": "Journey entry snapshot. Consolidate into one DMO with journey_name discriminator."
+  },
+  {
+   "tier": "H1",
+   "approach": "Custom DMO",
+   "name": "(_Entry|SendDE|EntryDE|Payment_Delay|Payment_Process|Add_Payment)",
+   "target": "Journey_Entry__dlm (Engagement)",
+   "rationale": "Transactional entry snapshot."
+  },
+  {
+   "tier": "I",
+   "approach": "Rebuild as CI",
+   "path": "04 Reporting",
+   "target": "Calculated Insight",
+   "rationale": "Derived report. Rebuild as Calculated Insight over engagement DMOs."
+  }
+ ],
+ "personalization_targets": {
+  "IGO_PROFILES": "ssot__Individual__dlm (via PartyIdentification)",
+  "IGO_PRODUCTS": "ssot__GoodsProduct__dlm",
+  "IGO_PRODUCTATTRIBS": "ssot__ProductAttribute__dlm",
+  "IGO_PURCHASES": "ssot__SalesOrder__dlm + ssot__SalesOrderProduct__dlm",
+  "IGO_VIEWS": "ssot__ProductBrowseEngagement__dlm",
+  "PI_CONTENT": "ssot__DigitalContent__dlm",
+  "PI_CONTENTATTRIBS": "ssot__DigitalContent__dlm",
+  "PI_CONTENTVIEWS": "ssot__WebsiteEngagement__dlm",
+  "PI_SESSIONS": "ssot__WebsiteEngagement__dlm",
+  "PI_SESSION_ENDS": "ssot__WebsiteEngagement__dlm",
+  "PI_ABANDONED_CART_EVENT": "ssot__ShoppingCartEngagement__dlm",
+  "PI_ABANDONED_CART_ITEMS": "ssot__ShoppingCartEngagementProduct__dlm"
+ },
+ "fields": [
+  [
+   "^(ContactID|ContactId|_ContactID|SubscriberKey|Subscriber Key|subscriberkey|ContactKey|_ContactKey|contact_key)$",
+   "ssot__Individual__dlm",
+   "ssot__Id__c",
+   "Party key. Confirm it equals the CRM Contact Id used by the CRM connector so IR needs no new rule."
+  ],
+  [
+   "^(FirstName|_FirstName|first_name)$",
+   "ssot__Individual__dlm",
+   "ssot__FirstName__c",
+   ""
+  ],
+  [
+   "^(LastName|_LastName|last_name)$",
+   "ssot__Individual__dlm",
+   "ssot__LastName__c",
+   ""
+  ],
+  [
+   "^Salutation$",
+   "ssot__Individual__dlm",
+   "ssot__Salutation__c",
+   ""
+  ],
+  [
+   "^(Email|EmailAddress|Email Address|email|email_address)$",
+   "ssot__ContactPointEmail__dlm",
+   "ssot__EmailAddress__c",
+   "DLO type must be EmailAddress or cast on map"
+  ],
+  [
+   "^(Phone|MobilePhone|Mobile|_MobileNumber|MobileNumber|NewMobilePhone)$",
+   "ssot__ContactPointPhone__dlm",
+   "ssot__TelephoneNumber__c",
+   "Also derive ssot__FormattedE164PhoneNumber__c"
+  ],
+  [
+   "^(City|_City|city)$",
+   "ssot__ContactPointAddress__dlm",
+   "ssot__CityName__c",
+   ""
+  ],
+  [
+   "^State$",
+   "ssot__ContactPointAddress__dlm",
+   "ssot__StateProvinceName__c",
+   ""
+  ],
+  [
+   "^(PostCode|post_code|PostalCode|Zip)$",
+   "ssot__ContactPointAddress__dlm",
+   "ssot__PostalCodeText__c",
+   ""
+  ],
+  [
+   "^(Country|country)$",
+   "ssot__ContactPointAddress__dlm",
+   "ssot__CountryName__c",
+   ""
+  ],
+  [
+   "^(StoreKey|StoreID|PreferredStoreID|LocationKey|LocationID|AccountID|AccountId)$",
+   "ssot__Account__dlm",
+   "ssot__Id__c",
+   "Location / business unit modelled as Account. Pick one canonical key."
+  ],
+  [
+   "^(StoreName|LocationName|AccountName)$",
+   "ssot__Account__dlm",
+   "ssot__Name__c",
+   ""
+  ],
+  [
+   "^(PetID|PetId|PETID|petid)$",
+   "<client asset DMO>",
+   "<asset key>",
+   "GAP: SFMC asset id vs source-system asset id usually differ. Confirm crosswalk DMO first."
+  ],
+  [
+   "^(EmailOptIn|HasOptedOutOfEmail|.*Opt_Out$|.*OptOut$)$",
+   "ssot__CommunicationSubscriptionConsent__dlm",
+   "ssot__ConsentStatus__c",
+   "Map bool to OptIn/OptOut; ChannelType = Email"
+  ],
+  [
+   "^(SMS_OptIn|SMSOptIn|Mobile_OptIn)$",
+   "ssot__CommunicationSubscriptionConsent__dlm",
+   "ssot__ConsentStatus__c",
+   "ChannelType = SMS"
+  ],
+  [
+   "^(Lead ID|LeadID|LeadId)$",
+   "ssot__Lead__dlm",
+   "ssot__Id__c",
+   ""
+  ],
+  [
+   "^(Date Collected|LeadCreatedDate)$",
+   "ssot__Lead__dlm",
+   "ssot__CreatedDate__c",
+   ""
+  ],
+  [
+   "^(Facebook .*|Lead Gen Form ID|utm_.*)$",
+   "ssot__Lead__dlm",
+   "ssot__LeadSourceId__c",
+   "Concatenate or add custom Lead attributes"
+  ],
+  [
+   "^(EventDate|SendDate|SentDate|sentdate|JourneyEntryDate.*|EntryDate|clickdate)$",
+   "Journey_Send_Log__dlm",
+   "event_datetime__c",
+   "Event time field. Must be Date type in DLO."
+  ]
+ ],
+ "custom_dmos": [
+  [
+   "Journey_Entry__dlm",
+   "Engagement",
+   "entry_id__c (PK) = journey_name + party_id + entry_datetime",
+   "entry_datetime__c",
+   "journey_name__c, party_id__c (FK Individual), asset_id__c, location_key__c (FK Account), offer_code__c, life_stage__c, plan_type__c, payment_type__c, renewal_date__c, join_date__c, cancel_reason__c, source_de__c",
+   "Union of all *_Entry_DE, *_SendDE, *_EntryDE via one SFMC SQL activity"
+  ],
+  [
+   "Journey_Send_Log__dlm",
+   "Engagement",
+   "send_log_id__c (PK) = job_id + party_id + event_datetime",
+   "event_datetime__c",
+   "journey_name__c, party_id__c, asset_id__c, email_name__c, job_id__c, send_status__c, error_text__c, source_de__c",
+   "Union of *_Log, *SendLog, Suspension_Log"
+  ],
+  [
+   "Einstein_Engagement_Score__dlm",
+   "Profile",
+   "party_id__c (PK)",
+   "score_date__c",
+   "email_open_score__c, email_click_score__c, unsub_score__c, web_conversion_score__c, persona__c",
+   "From Einstein predictive scores DE. Refresh daily."
+  ],
+  [
+   "Marketing_Exclusion__dlm",
+   "Other",
+   "exclusion_id__c (PK)",
+   "effective_from__c",
+   "rule_type__c, location_key__c, category__c, party_id__c, journey_name__c, is_inclusion__c, reason__c",
+   "From global exclusion / inclusion DEs"
+  ]
+ ]
+}

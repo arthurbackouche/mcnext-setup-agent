@@ -1,0 +1,242 @@
+{
+  "_meta": {
+    "baseline": "MC Next Growth/Advanced, Sept 2026. Refresh each release (see SKILL.md Step 1).",
+    "status_levels": {
+      "direct": "1:1 element exists. Rebuild as-is.",
+      "adapt": "Element exists but config, data source or behaviour differs. Rebuild with changes.",
+      "rearchitect": "No equivalent. Needs a different pattern (subflow, Apex action, segment logic, data prep).",
+      "drop": "Journey Builder artefact with no business logic. Omit."
+    }
+  },
+  "entry": {
+    "EmailAudience": {
+      "flow_type": "Segment-Triggered",
+      "status": "adapt",
+      "note": "DE entry. Source DE must be ingested to Data 360 and rebuilt as a segment. Flow runs on last PUBLISHED segment, not live DE state."
+    },
+    "AutomationAudience": {
+      "flow_type": "Segment-Triggered",
+      "status": "adapt",
+      "note": "Automation-fed DE entry. The upstream SQL/automation becomes segment logic or a Data 360 transform; the schedule becomes the segment publish schedule."
+    },
+    "SalesforceObj": {
+      "flow_type": "Record-Triggered",
+      "status": "direct",
+      "note": "Salesforce Data entry. MC Next runs on core, so trigger straight off the CRM object. Remove the MC Connect sync dependency."
+    },
+    "APIEvent": {
+      "flow_type": "Platform Event-Triggered or Data Cloud-Triggered",
+      "status": "rearchitect",
+      "note": "Caller must publish a Platform Event or stream via Ingestion API. Every upstream integration changes."
+    },
+    "ContactAudience": {
+      "flow_type": "Segment-Triggered",
+      "status": "adapt",
+      "note": "Audience Builder / filtered contact entry. Rebuild filter as a segment."
+    },
+    "Loyalty": {
+      "flow_type": "Record-Triggered",
+      "status": "adapt",
+      "note": "Loyalty Management generated journey (keys PL_/AJP_/FSU_/FP_). Trigger on the Loyalty object (TransactionJournal, Referral) in core. Check whether Loyalty now ships its own MC Next flows before rebuilding."
+    },
+    "CloudPages": {
+      "flow_type": "Record-Triggered or Form-driven",
+      "status": "rearchitect",
+      "note": "SmartCapture/CloudPage event. Replace with an MC Next form, then trigger off the resulting record."
+    },
+    "Unknown": {
+      "flow_type": "TBD",
+      "status": "rearchitect",
+      "note": "Entry source not recognised. Resolve the event definition manually."
+    }
+  },
+  "entry_mode": {
+    "MultipleEntries": {
+      "status": "direct",
+      "pattern": "Default Flow behaviour. Add duplicate guard only if the same record can re-enter while still in flow."
+    },
+    "OnceAndDone": {
+      "status": "adapt",
+      "pattern": "No native 'no re-entry'. Exclude prior entrants in the segment (engagement or campaign-member based), or stamp a flag field on first entry and check it in a Decision."
+    },
+    "SingleEntryAcrossAllVersions": {
+      "status": "adapt",
+      "pattern": "As OnceAndDone, and the guard must survive flow version changes. Use a durable field or Campaign Member, never flow-local state."
+    },
+    "NoReentry": {
+      "status": "adapt",
+      "pattern": "As OnceAndDone."
+    },
+    "ReentryOnlyAfterExit": {
+      "status": "adapt",
+      "pattern": "Guard on 'currently in flow'. Use Campaign Member status set on entry and cleared at every terminal path."
+    }
+  },
+  "activities": {
+    "EMAILV2": {
+      "element": "Send Email Message",
+      "status": "adapt",
+      "note": "Content rebuilt separately (see AMPscript audit). Send classification, sender profile and publication list map to MC Next sender config and subscription consent."
+    },
+    "EMAIL": {
+      "element": "Send Email Message",
+      "status": "adapt",
+      "note": "Legacy email activity. Same as EMAILV2."
+    },
+    "SMSSYNC": {
+      "element": "Send SMS Message",
+      "status": "adapt",
+      "note": "Sender (short/long code) re-provisioned in MC Next. Inline AMPscript in SMS body goes to content audit. Blackout window must be re-implemented (see blackout flag)."
+    },
+    "SMS": {
+      "element": "Send SMS Message",
+      "status": "adapt",
+      "note": "Legacy SMS activity. Same as SMSSYNC."
+    },
+    "PUSHNOTIFICATIONACTIVITY": {
+      "element": "Push (verify edition support)",
+      "status": "rearchitect",
+      "note": "MobilePush apps must be re-registered. Confirm MC Next push availability for the edition."
+    },
+    "INAPPACTIVITY": {
+      "element": "In-app (verify)",
+      "status": "rearchitect",
+      "note": "Confirm availability. Often replaced by Personalization web/app decisions."
+    },
+    "WAIT_duration": {
+      "element": "Wait for Amount of Time",
+      "status": "direct",
+      "note": "Carry duration, unit and time-of-day."
+    },
+    "WAIT_date": {
+      "element": "Wait Until Date",
+      "status": "direct",
+      "note": "Fixed date."
+    },
+    "WAIT_attribute": {
+      "element": "Wait Until Date (field-based)",
+      "status": "adapt",
+      "note": "Date attribute must exist on the triggering record or Data Graph."
+    },
+    "WAIT_event": {
+      "element": "Wait Until Event",
+      "status": "adapt",
+      "note": "Event must exist as an MC Next engagement or Data Cloud event."
+    },
+    "WAIT_terminal": {
+      "element": "(omit)",
+      "status": "drop",
+      "note": "Trailing short wait with no next step. Journey Builder path terminator. No Flow equivalent needed."
+    },
+    "STOWAIT": {
+      "element": "Einstein Send Time Optimization (verify)",
+      "status": "adapt",
+      "note": "Confirm STO is enabled in the MC Next org."
+    },
+    "MULTICRITERIADECISION": {
+      "element": "Decision",
+      "status": "adapt",
+      "note": "Decision reads Data Graph attributes on Unified Individual. Every attribute referenced must be on the Data Graph. See per-condition flags."
+    },
+    "ENGAGEMENTDECISION": {
+      "element": "Wait Until Event (engagement) + Decision",
+      "status": "adapt",
+      "note": "Rebuild as wait-for-click/open with timeout branch. Prefer clicks: opens are inflated by privacy proxies."
+    },
+    "RANDOMSPLIT": {
+      "element": "Path Experiment",
+      "status": "adapt",
+      "note": "Advanced edition only. On Growth: rearchitect with a random-number field and Decision."
+    },
+    "ABNTEST": {
+      "element": "Path Experiment",
+      "status": "adapt",
+      "note": "Advanced edition only."
+    },
+    "PATHOPTIMIZER": {
+      "element": "Path Experiment",
+      "status": "adapt",
+      "note": "Advanced edition only. Winner-selection rules differ, re-specify."
+    },
+    "EINSTEINSPLIT": {
+      "element": "(none)",
+      "status": "rearchitect",
+      "note": "Einstein Engagement Scoring persona split. Rebuild with Data 360 calculated insight or scoring attribute plus Decision."
+    },
+    "EINSTEINFREQUENCYSPLIT": {
+      "element": "(none)",
+      "status": "rearchitect",
+      "note": "Rebuild with a frequency calculated insight plus Decision."
+    },
+    "UPDATECONTACTDATA": {
+      "element": "(none)",
+      "status": "rearchitect",
+      "note": "Writes to a DE. No DE in MC Next. Write to a CRM field (Update Records) or drop if the DE only served MCE logic."
+    },
+    "SALESCLOUDACTIVITY": {
+      "element": "Create Records / Update Records",
+      "status": "direct",
+      "note": "Native core DML. Simpler than MCE. Watch recursion if it touches the triggering object."
+    },
+    "SALESFORCESALESCLOUDV2": {
+      "element": "Create Records / Update Records",
+      "status": "direct",
+      "note": "As SALESCLOUDACTIVITY."
+    },
+    "OBJECTACTIVITY": {
+      "element": "Create Records / Update Records",
+      "status": "direct",
+      "note": "Sales & Service Cloud object activity."
+    },
+    "REST": {
+      "element": "Action (Apex / External Service)",
+      "status": "rearchitect",
+      "note": "Custom Journey Builder activity. Rebuild as invocable Apex or External Service. Owner and endpoint needed."
+    },
+    "EVENT": {
+      "element": "Subflow or Platform Event publish",
+      "status": "rearchitect",
+      "note": "Journey-to-journey handoff. Model as subflow call."
+    },
+    "_default": {
+      "element": "(unmapped)",
+      "status": "rearchitect",
+      "note": "Unrecognised activity type. Inspect manually and add to mapping_rules.json."
+    }
+  },
+  "decision_operators": {
+    "Equal": "equals",
+    "NotEqual": "does not equal",
+    "Is": "is",
+    "IsNull": "is empty",
+    "IsNotNull": "is not empty",
+    "GreaterThan": "greater than",
+    "LessThan": "less than",
+    "GreaterThanOrEqual": "greater or equal",
+    "LessThanOrEqual": "less or equal",
+    "Contains": "contains",
+    "DoesNotContain": "does not contain",
+    "BeginsWith": "starts with",
+    "EndsWith": "ends with",
+    "ExistsInWholeWord": "is one of (list)",
+    "ExistsInString": "contains",
+    "Between": "between",
+    "DateAfter": "after",
+    "DateBefore": "before"
+  },
+  "flags": {
+    "event_attribute": "Uses journey entry data (Event.*). In MC Next the attribute must be on the Data Graph or the triggering record; entry payload is not carried like Journey Data.",
+    "contact_attribute": "Uses a Contact Builder attribute group. Map the source DE to its DMO and confirm the field is on the Data Graph.",
+    "reference_join": "Compares two attributes across objects (ValueIsReference). Needs a Data Graph related-object path or a pre-computed field. Highest-risk condition type.",
+    "list_operator": "Whole-word list match. Rebuild as an IN-style condition or, for long hard-coded lists, move the list into data (lookup attribute).",
+    "hardcoded_list": "Hard-coded ID list in a decision (store keys, codes). Candidate to move into data so the flow does not need edits when the list changes.",
+    "sms_blackout": "SMS blackout window configured. Re-implement with a Wait Until time-of-day or the MC Next SMS quiet-hours setting (verify).",
+    "subject_ampscript": "AMPscript in subject line. Route to content audit; subject personalisation syntax changes.",
+    "sms_ampscript_lookup": "SMS body runs Lookup(). Pre-flatten the value onto the Data Graph.",
+    "mixed_data_sources": "Single condition set mixes entry data and contact-model data. Both must resolve from one Data Graph in MC Next.",
+    "dormant": "No contact processed in the dormancy window. Candidate to retire rather than migrate.",
+    "exit_criteria": "Has exit criteria. MC Next exit criteria: max 10 conditions, evaluated at entry and after each wait.",
+    "goal": "Has a goal. No native goal. Model as exit criteria plus Campaign Member status for reporting.",
+    "spacer_wait": "Short (≤5 min) wait between steps. Usually a Journey Builder spacer. Confirm intent, else omit."
+  }
+}

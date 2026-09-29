@@ -1,0 +1,38 @@
+{
+  "skill_name": "journey-to-flow-translator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Run a journey migration triage on the Acme Retail MCE tenant. Which journeys should we retire, consolidate or migrate to MC Next?",
+      "expected_output": "register.csv and estate_summary.md. Dormant and test journeys marked Retire with reasons. Membership-stage Sprint series flagged as one consolidation. Re-entry guard counts reported.",
+      "files": [
+        "evals/fixtures/interactions_list.json"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Translate the Store Welcome Journey into an MC Next flow build spec and give me the Chrome prompt to build it.",
+      "expected_output": "Segment-Triggered flow. Email, spacer flagged, Has phone? decision (default 'No'), Country decision with cross-object ItemID join forcing verdict C. Data Graph list includes Store_Customer_Master.ItemID. QA exits 0.",
+      "files": [
+        "evals/fixtures/journeys/store-welcome.json"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We're on Growth edition. Rebuild Loyalty-Plan Renewal and Winback in Next. What breaks?",
+      "expected_output": "Verdict B. 14 effective elements, 4 decisions, 6 dropped terminal waits. Flags: hard-coded store key lists, SMS blackout, SMS Lookup, subject AMPscript, mixed data sources. Re-entry guard for SingleEntryAcrossAllVersions.",
+      "files": [
+        "evals/fixtures/journeys/loyalty-plan-renewal-winback.json"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Build Loyalty-Plan Renewal and Winback as a Draft flow in UAT and prove it matches the journey.",
+      "expected_output": "Preflight lists gates. Builder blocks until all 4 Data Graph attributes are mapped. With the full map: flow generated, store-key lists expanded to OR groups (4 and 16), parity passes 4 decisions / 3 waits / 7 sends, status Draft. Cutover runbook shows a 24-day drain window and a re-entry guard seed step.",
+      "files": [
+        "evals/fixtures/journeys/loyalty-plan-renewal-winback.json",
+        "evals/fixtures/map_test.json"
+      ]
+    }
+  ]
+}

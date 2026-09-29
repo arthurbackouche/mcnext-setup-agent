@@ -1,0 +1,2 @@
+    <decisions><name>{{NAME}}</name><label>{{LABEL}}</label><locationX>{{X}}</locationX><locationY>{{Y}}</locationY>
+        <defaultConnectorLabel>{{DEFAULT_LABEL}}</defaultConnectorLabel>{{DEFAULT_NEXT}}{{RULES}}</decisions>

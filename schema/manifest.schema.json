@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MCE to MC Next migration manifest",
+  "type": "object",
+  "required": ["client", "orgs", "phases", "journeys"],
+  "properties": {
+    "client": {"type": "string"},
+    "edition": {"enum": ["growth", "advanced"]},
+    "orgs": {
+      "type": "object",
+      "required": ["mce_eid", "sandbox_alias", "production_aliases"],
+      "properties": {
+        "mce_eid": {"type": "string"},
+        "sandbox_alias": {"type": "string"},
+        "production_aliases": {"type": "array", "items": {"type": "string"}},
+        "template_dir": {"type": "string"}
+      }
+    },
+    "phases": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["status"],
+        "properties": {
+          "status": {"enum": ["not_started", "in_progress", "gate_pending", "passed", "blocked"]},
+          "owner": {"type": "string"},
+          "artefacts": {"type": "array", "items": {"type": "string"}},
+          "gate_evidence": {"type": "string"},
+          "updated": {"type": "string"}
+        }
+      }
+    },
+    "journeys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["mce_id", "name", "status"],
+        "properties": {
+          "mce_id": {"type": "string"}, "name": {"type": "string"},
+          "status": {"enum": ["triaged", "translated", "blocked", "deployed_draft", "parity_passed", "cutover_ready", "live", "retired"]},
+          "disposition": {"enum": ["Retire", "Consolidate", "Migrate", null]},
+          "verdict": {"enum": ["A", "B", "C", null]},
+          "target_flow_type": {"type": "string"}, "family": {"type": "string"},
+          "flow_api_name": {"type": "string"}, "blocked_reason": {"type": "string"},
+          "artefacts": {"type": "object"}, "depends_on": {"type": "object"}
+        }
+      }
+    },
+    "content": {"type": "object", "additionalProperties": {"type": "object"}},
+    "data": {"type": "object", "additionalProperties": {"type": "object"}},
+    "decisions_log": {"type": "array", "items": {"type": "object", "required": ["date", "decision"]}}
+  }
+}

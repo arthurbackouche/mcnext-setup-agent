@@ -1,0 +1,2 @@
+    <waits><name>{{NAME}}</name><label>{{LABEL}}</label><locationX>{{X}}</locationX><locationY>{{Y}}</locationY>
+        <waitDuration>{{DURATION}}</waitDuration><waitUnit>{{UNIT}}</waitUnit>{{NEXT}}</waits>

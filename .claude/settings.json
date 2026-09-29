@@ -1,0 +1,25 @@
+{
+  "agent": "migration-orchestrator",
+  "env": {
+    "DEVELOPER_DIR": "/Library/Developer/CommandLineTools"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__.*",
+        "hooks": [{ "type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.py\"" }]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [{ "type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.py\"" }]
+      }
+    ]
+  },
+  "permissions": {
+    "deny": [
+      "Edit(approvals/**)",
+      "Write(approvals/**)",
+      "Bash(python3 scripts/approve.py *)"
+    ]
+  }
+}
