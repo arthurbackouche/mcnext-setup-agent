@@ -157,10 +157,10 @@ def build(eng, out):
     story += [P("4. Actions for the customer", h2)]
     acts = [f"{sid} {name}: {clip(s.get('handback') or s.get('evidence'), 300)}" for sid, name, s in open_items]
     s20 = steps.get("S20") or {}
-    if s20.get("status") == "done" and "activ" in str(s20.get("evidence", "")).lower():
+    if s20.get("status") == "done" and "activ" in (str(s20.get("summary", "")) + str(s20.get("evidence", ""))).lower():
         acts.append("Optional: review and activate the new record page with Data 360 components "
                     "(Setup > Object Manager > Contact > Lightning Record Pages > Activation).")
-    s17 = str((steps.get("S17") or {}).get("evidence", ""))
+    s17 = str((steps.get("S17") or {}).get("summary", "")) + str((steps.get("S17") or {}).get("evidence", ""))
     if "72" in s17 or "Send Time" in s17 or "STO" in s17:
         acts.append("Einstein Send Time Optimization trains its model in the background for up to 72 hours; no action needed.")
     if dns and (steps.get("S13") or {}).get("status") != "done":
@@ -177,9 +177,9 @@ def build(eng, out):
                                          [[P(a, small), P(b, small), P(c, small)] for a, b, c in dns],
                                          [14 * mm, 70 * mm, 86 * mm])]))
 
-    story += [P("6. How to re-verify", h2),
-              P("Run from any machine with the Salesforce CLI logged in to the org: sf data query -o <alias> -q \"<query>\"", small)]
-    story.append(table([hdr("Check", "Query")] + [[P(a, small), P(b, small)] for a, b in VERIFY], [40 * mm, 130 * mm]))
+    story.append(KeepTogether([P("6. How to re-verify", h2),
+                               P("Run from any machine with the Salesforce CLI logged in to the org: sf data query -o <alias> -q \"<query>\"", small),
+                               table([hdr("Check", "Query")] + [[P(a, small), P(b, small)] for a, b in VERIFY], [40 * mm, 130 * mm])]))
 
     def footer(canvas, doc):
         canvas.saveState()
