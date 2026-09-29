@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.2.0 (2026-09-29)
+
+MC Next setup skill rebuilt from a full live setup on a demo org.
+
+- Setup intake: every input is asked once, up front (`references/intake.md`, `scaffold/setup_intake.template.json`, `scripts/intake.py init|check|plan`). No change in the org before the intake passes.
+- Proven route per step (`references/setup_routes.md`): CLI routes for licences, permission sets and Data 360 enablement; Chrome routes with URLs, verification queries and gotchas for every other step.
+- Chrome playbook rewritten: technique only, classic iframe pages, concurrency signals, generic known-controls table.
+- PDF handover (`scripts/handover_pdf.py`, reportlab): steps with client-facing summaries, configuration, decisions, customer actions, DNS records, re-verification queries.
+- Demo and trial orgs: time-limited org trust grant in the guard (`trust:org:<mydomain>`).
+- Verification through the org's own data: MCP connectors can stay bound to another org from session start.
+
 ## 0.1.0 (2026-09-28)
 
 First public release.

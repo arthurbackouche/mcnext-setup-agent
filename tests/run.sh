@@ -48,6 +48,49 @@ expect "blocks JS with network call" 2 guard '{"tool_name":"mcp__claude-in-chrom
 expect "blocks act on unknown tab"   2 guard '{"tool_name":"mcp__claude-in-chrome__computer","tool_input":{"action":"left_click","tabId":99}}'
 [ -f "$E/out/.chrome_state.json" ] && ok "chrome state kept in engagement" || bad "chrome state kept in engagement"
 
+echo "demo-org trust grant"
+DEMO='{"tool_name":"mcp__claude-in-chrome__navigate","tool_input":{"url":"https://demoorg123.lightning.force.com/x","tabId":21}}'
+CLICK='{"tool_name":"mcp__claude-in-chrome__computer","tool_input":{"action":"left_click","tabId":21}}'
+guard "$DEMO" >/dev/null 2>&1
+expect "blocks click on untrusted demo org" 2 guard "$CLICK"
+expect "user grants org trust" 0 python3 "$E/scripts/approve.py" "trust:org:demoorg123" --reason test --ttl 5
+guard "$DEMO" >/dev/null 2>&1
+expect "allows click on trusted demo org" 0 guard "$CLICK"
+expect "trust grant is not consumed" 0 guard "$CLICK"
+OTHER='{"tool_name":"mcp__claude-in-chrome__navigate","tool_input":{"url":"https://otherorg.lightning.force.com/x","tabId":22}}'
+guard "$OTHER" >/dev/null 2>&1
+expect "other orgs stay blocked" 2 guard '{"tool_name":"mcp__claude-in-chrome__computer","tool_input":{"action":"left_click","tabId":22}}'
+
+echo "setup intake and handover"
+SK="$FW/.claude/skills/mcnext-setup/scripts"
+expect "intake init" 0 python3 "$SK/intake.py" init "$E"
+expect "blank intake fails check" 1 python3 "$SK/intake.py" check "$E"
+python3 - "$E" <<'PY'
+import json, sys, os
+e = sys.argv[1]
+d = json.load(open(os.path.join(e, "out/setup/intake.json")))
+d["org"].update(my_domain="example-uat", sf_alias="ex-uat", org_type="sandbox", edition="advanced")
+d["setup_user"]["username"] = "admin@example.com"
+d["company"] = {"street": "1 Example Street", "city": "Example City", "state": "EX", "postal_code": "0000", "country": "Exampleland"}
+d["security_contact"] = {"name": "Example Admin", "email": "security@example.com", "phone": "+10000000000"}
+d["sending_domain"].update(root_domain="example.com", from_display_name="Example Co", activate=False)
+json.dump(d, open(os.path.join(e, "out/setup/intake.json"), "w"), indent=2)
+steps = {f"S{i}": {"status": "done", "evidence": "SOQL check", "summary": f"Step {i} verified."} for i in range(1, 24)}
+for s in ("S12", "S22", "S23"):
+    steps[s] = {"status": "skipped", "summary": "Not requested in the intake."}
+json.dump(steps, open(os.path.join(e, "out/setup/steps.json"), "w"), indent=2)
+open(os.path.join(e, "out/setup/dns_records.md"), "w").write(
+    "| # | Purpose | Type | Host | Value |\n|---|---|---|---|---|\n| 1 | DKIM | CNAME | `s1._domainkey.e.example.com.` | `s1.e.example.com.dkim.example.net.` |\n")
+PY
+expect "filled intake passes check" 0 python3 "$SK/intake.py" check "$E"
+expect "intake plan" 0 python3 "$SK/intake.py" plan "$E"
+if python3 -c "import reportlab" 2>/dev/null; then
+  expect "handover PDF generated" 0 python3 "$SK/handover_pdf.py" "$E" --out "$TMP/handover.pdf"
+  [ -s "$TMP/handover.pdf" ] && head -c 5 "$TMP/handover.pdf" | grep -q "%PDF" && ok "handover is a PDF" || bad "handover is a PDF"
+else
+  echo "  skip handover PDF (reportlab not installed)"
+fi
+
 echo "journey translator fixtures"
 S="$FW/.claude/skills/journey-to-flow-translator"
 F="$S/evals/fixtures"

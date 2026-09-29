@@ -1,67 +1,77 @@
-# Chrome playbook for Salesforce Setup (sandbox)
+# Chrome playbook for Salesforce Setup
 
-How to drive Lightning Setup, the Data Cloud app and Marketing Setup through Claude in Chrome without a human. Every rule here comes from failures and fixes logged in `out/setup/actions.log` (2026-09-23/24) or from the guard hook.
+How to drive Lightning Setup, the Data Cloud app and Marketing Setup with Claude in Chrome without a human. Browser technique only; the per-step routes are in `setup_routes.md`. Everything here comes from failures and fixes on live orgs.
 
 ## 1. Session hygiene
-- **One Chrome agent at a time.** Two agents share one tab group and close each other's tabs within 2 to 4 calls. If your tab disappears, stop Chrome work and return `blocked: chrome concurrency`. Do not keep opening tabs.
-- Start: `tabs_context_mcp`, then `tabs_create_mcp` with the full sandbox URL. Never reuse a tab id from an earlier run.
-- Every tab must `navigate` to a full URL before any click. The guard tracks the host per tab and blocks actions on a tab with no known host.
-- Sandbox hosts contain `.sandbox.` (e.g. `<mydomain>--<sandbox>.sandbox.my.salesforce-setup.com` for Setup, `<mydomain>--<sandbox>.sandbox.lightning.force.com` for apps). Confirm the host and the "Sandbox" banner on the first screenshot of each step.
-- If a tab stops responding ("Cannot access chrome-extension URL"), close it, open a new one and navigate by URL. Do not click App Launcher on the Sales home page: it froze a tab once.
+- **One Chrome agent at a time.** Agents share one tab group and close each other's tabs. If `tabs_context_mcp` suddenly reports no tab group, or returns a different `tabGroupId` than before, stop Chrome work and return `blocked: chrome concurrency`. Do not keep opening tabs. Ask the user not to use that Chrome window during a run.
+- Start with `tabs_context_mcp`, then `tabs_create_mcp` with a full URL. Never reuse a tab id from an earlier run.
+- Every tab must `navigate` to a full URL before any action: the guard tracks the host per tab. Links with `target="_blank"` open a new tab with no registered host: `navigate` that tab to its own URL first, then act.
+- Confirm the host on the first screenshot of each step: a `.sandbox.` host, or the My Domain of a demo/trial org the user has trusted.
+- A tab that stops responding: close it, open a new one, navigate by URL. Avoid the App Launcher on the Sales home page.
+- Screenshots sometimes show the page tiled 2x2 or 4x4. Harmless: act on the top-left tile, the next navigation renders normally.
 - Login page, MFA, or any `exacttarget.com` / `marketingcloudapps.com` window: stop and hand back. Never type credentials.
 
 ## 2. Guard rules that shape tool choice
 - Reads always pass: `read_page`, `find`, `get_page_text`, `screenshot`, `read_console_messages`, `read_network_requests`.
-- Clicks, typing and `form_input` pass on sandbox hosts. On production Salesforce or MCE hosts they need approval.
-- Never use `browser_batch`: the guard checks it as a tab with no known host and always blocks it. Use single `navigate` / `computer` / `find` / `javascript_tool` calls.
-- Transient "auto mode classifier gave no verdict" errors happen mid-run. Wait briefly and retry the same call once.
-- `javascript_tool` passes **only on sandbox hosts** and only if the script text contains none of: `fetch`, `XMLHttpRequest`, `location`, `window.open`, `sendBeacon`, `.submit(`, `import(`. On any other host (medium.com included) it needs approval. Reading pages elsewhere: use `read_page` / `get_page_text`.
+- Clicks, typing and `form_input` pass on sandbox hosts and on demo/trial orgs covered by an active `trust:org:<mydomain>` grant. Production Salesforce and MCE hosts need approval.
+- Never use `browser_batch`: the guard sees no known host and blocks it.
+- `javascript_tool` passes only on sandbox/trusted hosts, and only if the script contains none of `fetch`, `XMLHttpRequest`, `location`, `window.open`, `sendBeacon`, `.submit(`, `import(`. Scripts that return values containing `=` or base64 can be refused by the auto-mode classifier: read such values with `find`/`read_page` instead.
+- "Auto mode classifier gave no verdict" is transient: wait, retry once.
 
 ## 3. Interaction ladder (per control, stop at the first rung that works)
-Take a fresh `read_page` of the smallest container (dialog, panel, table) before each rung. Refs go stale after any re-render.
+Take a fresh `read_page` of the smallest container before each rung; refs go stale after any re-render. Count one attempt per rung and log it.
 
-1. **Ref click on the right role.** Click the element whose role is `button`, `checkbox`, `option`, `radio`, `switch` or `tab`, not an inner `generic`/text node. For comboboxes: click the combobox ref, then immediately `read_page` the listbox subtree and click the `option` ref. (This fixed the Relationship Cardinality N:1 picker after 10 failed coordinate and keyboard tries.)
-2. **`form_input` on the ref** for native inputs, selects and checkboxes (sets value and fires change events).
-3. **Keyboard.** Focus the ref, then `key` Space (checkbox, toggle) or Down/Enter (combobox), or type ahead then Enter. Verify the value after, since keyboard once picked the wrong option (1:1 instead of N:1).
-4. **Scripted click through shadow DOM** (sandbox only). Lightning renders inside shadow roots, so plain selectors miss it. Use this helper, then act on one element and return a short string:
+1. **Ref click on the right role**: `button`, `checkbox`, `option`, `radio`, `switch`, `tab`, never an inner text node. Comboboxes: click the combobox, then `read_page` the listbox (for virtualised pickers use `filter="all"` and depth 30+) and click the `option` ref. Coordinate clicks in scrolled pickers pick the wrong option.
+2. **`form_input` on the ref** for inputs, selects, checkboxes. Search and Quick Find boxes often ignore plain `type`: `find` a fresh ref, then `form_input`, then one real keystroke (End, BackSpace, one character) to fire the live filter.
+3. **Keyboard**: Space for checkboxes and toggles, Down/Enter for comboboxes. Verify: keyboard has picked the wrong option before.
+4. **Script through shadow DOM** (sandbox/trusted only):
    ```js
    const all=[];(function walk(r){r.querySelectorAll('*').forEach(e=>{all.push(e);if(e.shadowRoot)walk(e.shadowRoot);});})(document);
-   const hit=all.filter(e=>(e.getAttribute('aria-label')||e.textContent||'').trim()==='View Objects');
+   const hit=all.filter(e=>(e.getAttribute('aria-label')||e.textContent||'').trim()==='<label>');
    if(hit[0]){hit[0].scrollIntoView({block:'center'});hit[0].click();}
    'found '+hit.length
    ```
-   For a checkbox: find the `input[type=checkbox]` in the row, call `.click()`; if the state does not change, set `checked` and dispatch `new Event('change',{bubbles:true,composed:true})` and `new Event('input',{bubbles:true,composed:true})`. For buttons that ignore `.click()`, dispatch `pointerdown`, `mousedown`, `pointerup`, `mouseup`, `click` in order with `{bubbles:true,composed:true}`.
-5. **Reset and retry once.** Reload the page (navigate to the same URL), reopen the wizard or editor, redo rung 1 to 4 on that control only.
-6. **Alternative route.** Look for another way to reach the same end state: a different page (e.g. Data Stream record vs wizard), a related-list button, a "New" from a list view, a Setup Quick Find entry, or a CLI or metadata route (section 6).
-7. **Hand back.** Only after rungs 1 to 6 fail. Record the control, the rungs tried and a screenshot. Write the exact manual clicks for the user in `out/setup/runbook.md`, then move to the next independent step.
+   Disabled-by-design checkboxes (Data Graph field lists): find `input[type=checkbox]` by its `value` (the field id), set `checked`, then dispatch `change` and `input` with `{bubbles:true,composed:true}`. Buttons that ignore `.click()`: dispatch `pointerdown`, `mousedown`, `pointerup`, `mouseup`, `click`.
+5. **Reset**: navigate to the same URL, reopen the wizard, redo rungs 1 to 4 on that control only.
+6. **Alternative route**: another page reaching the same state (record page vs wizard, related list, list view "New", Quick Find, CLI or metadata).
+7. **Hand back** only after rungs 1 to 6: record control, rungs, screenshot, and the exact manual steps in `out/setup/runbook.md`. Move to the next independent step.
 
-Count one "attempt" per rung, not per click. Log each rung in `out/setup/actions.log`.
+Do not climb the ladder on a control that is disabled because a dependency is still running (e.g. Generate Ruleset while kits deploy): poll the dependency.
 
-## 4. Verify, never assume
-- After each change: reload, screenshot, and read the value back (`read_page` or `find`). A focus outline is not a change: the graph editor showed focus with no toggle.
-- Then prove it with a Part 1 check (SOQL, d360 read or visible saved state). Only that marks a step `done`.
-- Record a GIF for each step with `gif_creator` (e.g. `setup_S11_graph_fields.gif`), saved to `out/setup/`.
+## 4. Classic Setup pages inside iframes
+Company Information, permission-set "Data Cloud Data Space Management", and other classic pages render inside a same-origin `vfFrameId_...` iframe, often nested in a shadow root. `read_page`/`find` see only the Lightning chrome around it. Use the shadow-DOM walk to find the `iframe`, then work on `iframe.contentDocument`: set inputs by name/id, click Save (`input[name=save]` or an id ending `saveButton`), dismiss confirm dialogs (e.g. id `simpleDialog0button0`). Verify by reloading and reading the values back, or with SOQL.
 
-## 5. Known controls (generic Lightning behaviour seen in live orgs)
-| Control | Where | Status | What worked or next rung |
-|---|---|---|---|
-| Unified Individual Object combobox | Basic Settings | solved | find + ref click on 3rd try; listbox options then clickable |
-| Relationship Cardinality picker | DMO > Relationships > New | solved | read_page dialog subtree right after opening, click `option` ref |
-| Configure Basic Personalization graph picker | Assistant Home > Customer Engagement | solved | listbox `option` ref click, auto-saves |
-| Data kits | Basic Settings | solved | one "Update" button deploys all kits (up to 30 min) |
-| Generate Ruleset button | Basic Settings | solved when one Chrome agent | tab closures were concurrency, not the UI |
-| View Objects toggle | Data Streams > New > Salesforce CRM | open | failed on coordinate, ref, double click. Next: rung 4 dispatch sequence; then rung 6 (bundle view search box, or Data Cloud Setup > Salesforce CRM > object picker) |
-| Data Graph field checkboxes | Data Graph editor, the `editor_view` page reached by clicking the graph name in the Data Graphs list | dead end | this page is READ-ONLY: no Save button exists at all. Checkbox toggles (any rung) update the live field count but are always discarded on navigation. Do not use this entry point to edit a graph. |
-| Data Graph field checkboxes | Data Graph editor, the `editor_edit` page reached by Data Graphs list row > Show Actions (kebab) > Edit | solved | rung 4b: checkboxes are natively `disabled` (by design). Find `input[type=checkbox]` via a light+shadow-DOM walk matched by its `value` attribute (= field id), set `checked=false`, then `dispatchEvent(new Event('change',{bubbles:true,composed:true}))` and the same for `'input'`. Ref click (rung 1) only focuses the row, never toggles, on both editor_view and editor_edit. A field that is the join/foreign-key to a related object (e.g. `ssot__PartyId__c`/"Party" linking Individual to Unified Link Individual) always reverts when unchecked -- protected, not a bug. Must `Save Draft` or `Save and Build` on the editor_edit page; no autosave. |
-| "Add related object" combobox next to a tree node | Data Graph editor (editor_edit page) | solved | coordinate clicks after scrolling the popup are unreliable and silently select the wrong option (virtualization bug); `find()` cannot locate the option elements either. Fix: `read_page(filter="all", depth>=30)` on the whole page locates the dialog's `option` elements with stable refs (search output for the target object's exact label); click that ref directly. Works on the first try once the correct ref is used. |
-| Save and Build (Data Graph editor_edit page) | Data Graph editor | solved, async | clicking `Save and Build` opens a "Set Your Data Graph's Refresh Schedule" modal; click its own `Save and Build` button too. Confirm success via `read_network_requests` for `POST aura?r=..&aura.CdpDataGraph.editDataGraph=1` returning 200 -- do NOT rely on `d360_data_graph_get` or the editor_view page updating immediately: the built/active definition only reflects the change after the graph's own schedule (e.g. every 30 minutes) runs its next build. Treat as a long job: record `running`, poll on a later run. |
-| Match rule radio (Custom Rule) | Identity Resolution > Add Match Rule | open | ref and label click failed. Next: rung 2 `form_input`, then rung 4 |
-| Add Data Protection Details to Records | Basic Settings | open | heading is a status indicator only. Next: `find` a link or button in that section; Quick Find "Data Protection"; Setup > Data Protection and Privacy; record what the page offers |
+## 5. Verify, never assume
+- After each change: reload, then read the value back. A focus outline is not a change.
+- Prove it with SOQL or the saved page state before marking `done`. Wait about 10 seconds after a reload before trusting a "not done" status: status lists render stale placeholders first.
+- Async feature installs: the product's own status tab (Template, Status=Success, Monitoring "Task Overview N/N") is the signal, not the checklist button.
+- Toggles that look reverted after reload (Einstein features): click again; a "disable?" dialog means it is on, click Cancel.
+- Long grids with truncated values (DNS records): read each cell with `find`/`read_page`; a second grid can sit below the first.
+- Record a GIF per step with `gif_creator` in `out/setup/` when practical.
 
-Update this table after every run: move items to "solved" with the rung that worked.
+## 6. Known controls (generic)
+| Control | Behaviour | What works |
+|---|---|---|
+| Basic Settings "Try Again" on a failed item | fixes transient failures | rung 1 |
+| Select a Data Space (Basic Settings) | opens with 0 options | see setup_routes S9: provisioning still running, or data space not granted per permission set |
+| Data kits "Deploy" | one button for all kits; rows flip one by one | rung 1, then poll rows |
+| Generate Ruleset | natively disabled while kits deploy; can enable before the last kit finishes | poll its disabled state; after Generate, Run the ruleset from its record page |
+| Data Graph edit | name link opens read-only view | row menu > Edit; Save Draft or Save and Build (plus the schedule modal's own button); build is async |
+| Data Graph add related object | only offers relationships declared on nodes already in the graph | find the target DMO's relationships in Data Model, add it from that source node |
+| Relationship cardinality picker | selections revert | click the `option` ref from `read_page` right after opening |
+| Lightning App Builder components | drag and drop silently fails | select a component to reveal the "+" insertion point, click it, then click the component in the left panel |
+| Classic Clone / Save buttons | invisible to `find` | iframe contentDocument (section 4) |
+| Company Information Save | fails "Security Contact: name is required" | collect Security Contact name, email, phone in the intake |
+| Flow Performance data space | resets on reload | re-select before each Install |
+| Identity Resolution match rule radios | ignore ref and label clicks | rung 2, then rung 4 |
+| "New DMO > From Existing" wizard | can hang on the DLO fetch | reload the whole page, else use the Data Stream's Data Mapping route |
+| View Objects toggle (new CRM stream) | ignores clicks | rung 4 dispatch, then the bundle view's search box |
 
-## 6. Non-UI routes worth trying before a hand-back
-- **Permission sets and licences**: `sf org assign permset|permsetlicense -o <sandbox>` (guard allows on sandbox).
-- **Metadata retrieve** (read-only, allowed): `sf project retrieve start -o <sandbox> -m "DataGraph:*"` or other Data Cloud types to learn the shape. A deploy of a changed graph or stream to the sandbox is allowed by the guard, but only after a retrieve proves the type exists. Confirm with a dry run first. Needs the `sf` login for the sandbox.
-- **Data 360 REST** `/services/data/vXX.X/ssot/connections` works for generic connectors [AB:rest-connector-d360]. Not confirmed for the CRM or MCE connectors: GET a UI-built object first and use it as the template.
-- **Consent seeding**: Consent Imports CSV in the UI, or a record-triggered flow with the `MessagingConsent` action (1-minute scheduled path) deployed as Draft.
+Add generic rows only (page, control, what worked). No org names, hosts, record names or counts.
+
+## 7. Non-UI routes worth trying first
+- Licences and permission sets: `sf org assign permsetlicense|permset -o <alias>`.
+- Data 360 enablement: Metadata API `Settings:CustomerDataPlatform` (see setup_routes S3).
+- Metadata retrieve (read-only) to learn shapes: `sf project retrieve start -o <alias> -m "<Type>:*"`. Deploy only after a dry run.
+- Data 360 REST `/services/data/vXX.X/ssot/connections` for generic connectors; GET a UI-built object first as the template.
+- Consent seeding: Consent Imports CSV, or a Draft record-triggered flow with the `MessagingConsent` action (1-minute scheduled path).

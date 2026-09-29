@@ -66,6 +66,21 @@ def production_aliases():
     except Exception:
         return set()
 
+def trusted_org(host):
+    """Standing trust for a non-sandbox demo/trial org, granted by the user with
+    approve.py "trust:org:<mydomain>" --ttl <minutes>. Not consumed; valid until it expires."""
+    mydomain = host.split(".")[0].split("--")[0] if host else ""
+    if not mydomain:
+        return False
+    try:
+        appr = json.load(open(os.path.join(APPROVALS, safe(f"trust:org:{mydomain}") + ".json")))
+        if dt.datetime.fromisoformat(appr["expires_at"]) > now():
+            audit({"decision": "trusted_org", "host": host})
+            return True
+    except Exception:
+        pass
+    return False
+
 def check_mcp(tool, args):
     parts = tool.split("__", 2)
     server, name = (parts[1], parts[2]) if len(parts) == 3 else ("?", tool)
@@ -110,7 +125,7 @@ def host_class(host):
     if MCE_HOST.search(host):
         return "mce"
     if PROD_SF_HOST.search(host):
-        return "prod"
+        return "sandbox" if trusted_org(host) else "prod"
     return "neutral"
 
 def chrome_state():

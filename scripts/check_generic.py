@@ -39,7 +39,8 @@ for e in a.engagement:
     terms |= {m.get("client", ""), o.get("mce_eid", ""), o.get("sandbox_alias", "")} | set(o.get("production_aliases", []))
 if os.path.exists(a.denylist):
     terms |= {l.strip() for l in open(a.denylist) if l.strip() and not l.startswith("#")}
-terms = {t for t in terms if len(t) >= 3}
+PLACEHOLDERS = {"none", "unknown", "n/a", "tbd", "no-prod", "placeholder"}
+terms = {t for t in terms if len(t) >= 3 and t.lower() not in PLACEHOLDERS}
 rx = {k: re.compile(v, re.I) for k, v in PATTERNS.items()}
 rx.update({f"term '{t}'": re.compile(r"(?<![A-Za-z0-9])" + re.escape(t) + r"(?![A-Za-z0-9])", re.I) for t in terms})
 

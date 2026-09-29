@@ -31,6 +31,7 @@ Generic behaviours learned on live MCE → MC Next engagements. Agents read `CLA
 
 ## Claude Code tooling
 - Connector tool lists bind at session start. After fixing auth, restart the session.
+- MCP connectors also stay bound to the org they authenticated to at session start. On a new engagement, prove which org an MCP connector reads (compare with `sf` SOQL on the target alias) before trusting it; otherwise verify with `sf data query` and Chrome only.
 - `/goal` works in `claude -p`, including multi-line prompts.
 - The guard fires under `--permission-mode auto` in `claude -p`.
 - The auto-mode classifier can fail for minutes ("no verdict"). Retry once, then move on.

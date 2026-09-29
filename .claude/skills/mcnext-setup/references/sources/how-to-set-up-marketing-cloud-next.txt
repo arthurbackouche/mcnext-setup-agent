@@ -165,34 +165,3 @@ Sites and Forms
 User Access
 Brand
 Page Customization
-									Arthur Backouche helps organisations and professionals get more value from Salesforce and modern marketing technologies. Driven by clarity, impact, and practical execution.
-Please share a few details below and I’ll get back to you shortly.
-																						SUBMIT
-									Get Started
-									X
-## NAVIGATION
-									↳ Agentforce Marketing
-									↳ Data 360
-									↳ Agentforce
-									Offerings
-									Docs MC Next
-									Docs Data 360
-									Impact Studies
-									Podcast
-									About 
-## LATEST NEWS
-									Understanding Data Graphs in Agentforce Marketing
-Arthur Backouche insights about Data Graphs within Agentforce Marketing , and how they enable organizations to deliver Real-Time Personalization.
-									↳ Read the article
-									How to Orchestrate Multi-Agents with Claude for Salesforce Delivery.
-This article explains how to leverage Claude Multi-Agents to Deliver Robust Salesforce Solutions Faster.
-									↳ Read the article
-									The Agentforce Marketing Ultimate Guide.
-This guide provides a structured implementation methodology designed to reduce deployment time from weeks to under 24 hours.
-									↳ Purchase the Book
-## OFFERING
-									We are helping organisations and professionals get more value from Salesforce and modern marketing technologies. Driven by clarity, impact, and practical execution.
-Please share a few details below and I’ll get back to you shortly.
-									↳ Discover our offerings
-									Get Started
-									X

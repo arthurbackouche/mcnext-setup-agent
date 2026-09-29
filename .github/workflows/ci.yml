@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install optional dependencies
-        run: pip install jsonschema openpyxl
+        run: pip install jsonschema openpyxl reportlab
       - name: Framework self-tests (genericity, scaffold, guard, translator fixtures)
         run: bash tests/run.sh
       - name: Shell syntax

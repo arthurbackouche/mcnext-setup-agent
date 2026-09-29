@@ -4,13 +4,13 @@ Source folder: `out/kb/arthurbackouche/raw/`. 8 articles.
 
 ### How to setup the Domain Authentication in Marketing Cloud Next
 Source: https://arthurbackouche.com/docs/marketing-cloud-next/email-channel-configuration/how-to-setup-the-domain-authentication-in-marketing-cloud-next/
-- Purpose: authenticate a sending subdomain (e.g. `e.thebackouchegroup.com`) so email sends carry the brand domain and reach the inbox rather than spam.
+- Purpose: authenticate a sending subdomain (e.g. `e.example.com`) so email sends carry the brand domain and reach the inbox rather than spam.
 - Prerequisites and order dependencies: needs a domain registrar account (DNS access). This is the first step of the email channel setup chain: it unblocks "From Addresses" (next article explicitly says so) and Reply Mail Management (RMM), both of which live inside the same Authenticated Domain record.
 - Steps:
   1. Salesforce Setup > "Set-up Email".
   2. On the Email page click "Go to Authenticated Domains".
   3. On the Authenticated Domains page click "+ Add a Domain".
-  4. Enter a subdomain (convention: `e.` or `email.` prefix, e.g. `e.thebackouchegroup.com`). Click "Submit".
+  4. Enter a subdomain (convention: `e.` or `email.` prefix, e.g. `e.example.com`). Click "Submit".
   5. Create an email address for that domain (e.g. `marketing@e.example.com`), click "Create Now".
   6. Back in Salesforce, click "Manual DNS Record Information" under "Update the DNS Records".
   7. Copy the listed DNS records into the domain registrar's DNS tab (GoDaddy in the example).

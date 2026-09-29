@@ -30,7 +30,9 @@ claude
 
 In Claude Code: trust the folder (hooks only run in trusted folders), run `/mcp` and authenticate `sfmc`, `salesforce` and `d360`, restart the session, then ask:
 
-> Run the setup loop and discovery. Stop at the retire-list gate.
+> Set up MC Next, then run discovery. Stop at the retire-list gate.
+
+The orchestrator first asks all setup questions in one message (org, edition, data space, company address, security contact, sending domain, test recipient, options; see `.claude/skills/mcnext-setup/references/intake.md`). It then builds without further questions and ends with a PDF handover in `out/setup/`.
 
 ## How it works
 

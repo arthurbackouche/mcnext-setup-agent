@@ -1,0 +1,45 @@
+{
+  "_help": "Fill every field before the setup starts. Use null to skip an optional item. See .claude/skills/mcnext-setup/references/intake.md",
+  "org": {
+    "my_domain": "<my domain prefix, e.g. acme--uat or acme-demo>",
+    "login_url": "https://test.salesforce.com",
+    "sf_alias": "<alias used with sf org login, e.g. acme-uat>",
+    "org_type": "sandbox | demo_or_trial",
+    "edition": "growth | advanced"
+  },
+  "setup_user": {
+    "username": "<Salesforce username that runs the setup and receives the admin permission sets>"
+  },
+  "data_space": "default",
+  "company": {
+    "street": "<street>",
+    "city": "<city>",
+    "state": "<state or province>",
+    "postal_code": "<postcode>",
+    "country": "<country>"
+  },
+  "security_contact": {
+    "name": "<full name>",
+    "email": "<email>",
+    "phone": "<phone>"
+  },
+  "sending_domain": {
+    "root_domain": "<your domain, e.g. example.com, or null to skip>",
+    "subdomain_prefix": "e",
+    "from_display_name": "<display name on emails>",
+    "from_username": "marketing",
+    "activate": false
+  },
+  "mce": {
+    "eid": null
+  },
+  "test_send": {
+    "recipient_email": null
+  },
+  "options": {
+    "install_analytics": true,
+    "einstein_features": ["metrics_guard", "send_time_optimization", "engagement_frequency", "engagement_scoring"],
+    "contact_page_components": true,
+    "activate_contact_page": false
+  }
+}

@@ -6,7 +6,7 @@ Covers check S13 (default email channel / sending domain). Consent and physical 
 
 ### Domain authentication (first step of the chain)
 
-1. Salesforce Setup > "Set-up Email" > Go to Authenticated Domains > **+ Add a Domain**. Enter a **dedicated subdomain** (convention: `e.` or `email.` prefix, e.g. `e.thebackouchegroup.com`) — deliberately not the root domain, so web-traffic reputation does not affect email domain reputation. [AB:domain-auth-mcn] [AB:configure-mcn]
+1. Salesforce Setup > "Set-up Email" > Go to Authenticated Domains > **+ Add a Domain**. Enter a **dedicated subdomain** (convention: `e.` or `email.` prefix, e.g. `e.example.com`) — deliberately not the root domain, so web-traffic reputation does not affect email domain reputation. [AB:domain-auth-mcn] [AB:configure-mcn]
 2. Create an email address for that domain (e.g. `marketing@e.example.com`). Click "Manual DNS Record Information" under "Update the DNS Records", copy the listed records into the domain registrar's DNS tab (e.g. GoDaddy). Click "Apply Change" to validate. [AB:domain-auth-mcn]
 3. **DNS validation is asynchronous and can take up to 72 hours** — do not expect immediate success after Apply Change. [AB:domain-auth-mcn]
 
